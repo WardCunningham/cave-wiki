@@ -30,9 +30,15 @@ def titalize text
   excluded = %w(the this that if and or not may any all in of by for at to be)
   text.capitalize!
   text.gsub! /[\[\]]/, ''
+  text.gsub! /[.!]$/, ''
   text.gsub(/[\w']+/m) do |word|
       excluded.include?(word) ? word : word.capitalize
   end
+end
+
+def capitalize text
+  sentences = text.downcase.split '. '
+  sentences.map(&:capitalize).join '. '
 end
 
 
@@ -61,108 +67,161 @@ def pagefold text, id = random()
   add({'type' => 'pagefold', 'text' => text, 'id' => id})
 end
 
-def markdown text
-  lines = text.split /(\r?\n)+/m
-  lines.each do |line|
-    line.gsub! /```(.+?)```/, '<b>\1</b>'
-    line.gsub! /`(.+?)`/, '<b>\1</b>'
-    line.gsub! /https?:\/\/\S+/, '[\0 \0]'
-    line.gsub! /WardCunningham\/\S+?#\d+/, '[https://github.com/\0 \0]'
-    line.gsub! /([0-9a-f]{7})[0-9a-f]{9,}/, '[https://github.com/wardcunningham/wiki/commit/\0 \1]'
-    line.gsub! /##+/, '<h3>'
-    paragraph line unless line[0,1] == '>'
-  end
-end
-
 def page title
   @story = []
   @journal = []
   create title
   yield
   page = {'title' => title, 'story' => @story, 'journal' => @journal}
-  path = "repo/#{@@repo}/pages/#{slug(title)}"
+  path = "../pages/#{slug(title)}"
   File.open(path, 'w') do |file|
     file.write JSON.pretty_generate(page)
   end
   File.utime Time.at(@@date), Time.at(@@date), path
 end
 
-
-# github api json
-
-def fetch resource, path
-  puts "fetch #{path}"
-  return if File.exist? path
-  puts "fetching #{resource}"
-  puts `curl -i -s 'https://api.github.com/repos/WardCunningham/#{resource}' > #{path}`
-  puts `grep 'X-RateLimit-Remaining:' #{path}`
+def json obj
+  text = JSON.pretty_generate(obj)
+  add({'type' => 'code', 'text' => text, 'id' => random()})
 end
 
-def comments issue
-  return if issue['comments'] == 0
-  path = "repo/#{@@repo}/comments-#{issue['number']}"
-  fetch "#{@@repo}/issues/#{issue['number']}/comments", path
-  head, json =  File.read(path).split(/\r\n\r\n/m)
-  body = JSON.parse json
-  body.each do |comment|
-    @@date = Time.parse(comment['created_at']).to_i
-    pagefold comment['user']['login'], comment['id'].to_s
-    markdown comment['body']
-    puts "#{comment['created_at']} #{comment['id']} #{comment['user']['login']}"
+
+# adventure data file
+
+def segment file
+  puts "doing segment #{file.gets}"
+  while line = file.gets
+    break if line =~ /^-1\s/
+    yield line
   end
 end
 
-def issues path
-  puts "issues #{path}"
-  head, json =  File.read(path).split(/\r\n\r\n/m)
-  body = JSON.parse json
-  result = []
-  body.each do |issue|
-    next if issue['pull_request']['patch_url']
-    @@date = Time.parse(issue['created_at']).to_i
-    puts "##{issue['number']} #{issue['title']}"
-    title = titalize issue['title']
-    result << "[[#{title}]]<br>##{issue['number']} by #{issue['user']['login']} with #{issue['comments']} comments"
-    page title do
-      pagefold "#{issue['state']} issue ##{issue['number']} by #{issue['user']['login']}"
-      markdown issue['body']
-      paragraph "See issue in [#{issue['html_url']} github]"
-      comments issue
+def room file
+  num = nil
+  txt = ''
+  segment(file) do |line|
+    if fields = /^(\d+)\s+(.*)$/.match(line)
+      if fields[1] == num
+        txt += " #{fields[2]}"
+      else
+        yield num, txt if num
+        num = fields[1]
+        txt = fields[2]
+      end
     end
   end
-  result
+  yield num, txt
 end
 
-def summary path, open, closed
-  puts "summary #{path}"
-  head, json =  File.read(path).split(/\r\n\r\n/m)
-  body = JSON.parse json
-  @@date = Time.parse(body['pushed_at']).to_i
-  page titalize "#{body['name']} Issues" do
-    paragraph "#{body['description']} [#{body['html_url']}/issues github]"
-    paragraph "<h3> Open Issues" if open.length
-    open.each {|issue| paragraph issue}
-    paragraph "<h3> Closed Issues" if closed.length
-    closed.each {|issue| paragraph issue}
+def travel file
+  segment(file) do |line|
+    tk = line.split /\s+/
+    num = tk.shift
+    dest = tk.shift
+    yield num, dest, tk
   end
 end
 
-def repository name
-  @@repo = name
-  @@date = Time.now.to_i
-
-  puts "repo #{@@repo}"
-
-  fetch "#{@@repo}/issues?state=open&per_page=100", "repo/#{@@repo}/issues-open"
-  open = issues "repo/#{@@repo}/issues-open"
-
-  fetch "#{@@repo}/issues?state=closed&per_page=100", "repo/#{@@repo}/issues-closed"
-  closed = issues "repo/#{@@repo}/issues-closed"
-
-  fetch "#{@@repo}", "repo/#{@@repo}/repo"
-  summary "repo/#{@@repo}/repo", open, closed
+def read
+  File.open('advdat.77-03-31.txt','r') do |file|
+    room(file) {|num,line| @rooms << num;  @room[num] = line}
+    room(file) {|num,line| @short[num] = line}
+    travel(file) {|num,to,tk| @dest[num][to] = tk}
+    room(file) {|num,line| @words[num] = line.split /\s+/}
+    segment(file) {|line| puts line}
+  end
 end
 
-repository 'wiki'
-repository 'wiki-client'
-repository 'smallest-federated-wiki'
+def shorten text
+  return $1 if text=~/ AN? (.*?) PARALLEL/
+  return $1 if text=~/ IN (.*?) WHICH/
+  return $1 if text=~/ IN AN? (.*?)[.,]/
+  return $1 if text=~/ ON THE (.*?)[.,]/
+  return $1 if text=~/ IN THE (.*?)[.,]/
+  return $1 if text=~/ AN? (.*?)[.,!]/
+  return $1 if text=~/(THE [A-Z]+) /
+  return $1 if text=~/^([A-Z' ]{5,35}?)\.?$/
+  "no short"
+end
+
+def depersonalize text
+  return $1 if text=~/MAZE OF (.*)$/
+  return $1 if text=~/YOU'RE AT (.*)$/
+  return $1 if text=~/YOU'RE IN (.*)$/
+  return $1 if text=~/YOU'RE ON (.*)$/
+  return $1 if text=~/YOU'RE (.*)$/
+  text
+end
+
+def uniq num, text
+  return "#{text} (#{num})" if @dup[text]
+  return text if @dup[text] = true
+end
+
+def beTitle num
+  return if num.to_i>80
+  text = @short[num] || shorten(@room[num])
+  uniq(num, titalize(depersonalize(text)))
+end
+
+def beDescription num
+  capitalize @room[num]
+end
+
+def beChoice num, keys
+  action = "Action ##{num}"
+  list = keys.map do |key|
+    @words[key].map(&:downcase).join ' '
+  end
+  "#{list.join ', '}<br>[[#{@title[num] || action}]]"
+end
+
+def dump num
+  puts "\n== #{num} =================================="
+  puts beDescription num
+  puts @title[num]
+  @dest[num].each do |num,keys|
+    puts beChoice num,keys
+  end
+end
+
+def emitStory num
+  page @title[num] do
+    paragraph beDescription num
+    if @short[num]
+      pagefold 'short'
+      paragraph capitalize @short[num]
+    end
+    pagefold 'travel'
+    # json @dest[num]
+    @dest[num].each do |num,keys|
+      paragraph beChoice num,keys
+    end
+  end
+end
+
+
+@dup ={}
+@rooms = []
+@room = {}
+@short = {}
+@title = {}
+
+@dest = Hash.new {|h,k| h[k]={}}
+@words = Hash.new {|h,k| h[k]=[]}
+@words['1'] = '(auto)'
+
+
+read
+# exit
+
+@rooms.each do |num|
+  @title[num] = beTitle num
+end
+
+@@date = Time.now.to_i
+@rooms.each do |num|
+  dump num
+  emitStory num
+  @@date -= 1
+end
