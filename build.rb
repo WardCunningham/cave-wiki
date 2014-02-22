@@ -3,6 +3,7 @@ require 'json'
 require 'time'
 require 'pp'
 
+@@date = Time.now.to_i
 
 # wiki utilities
 
@@ -128,7 +129,8 @@ def read
     room(file) {|num,line| @short[num] = line}
     travel(file) {|num,to,tk| @dest[num][to] = tk}
     room(file) {|num,line| @words[num] = line.split /\s+/}
-    segment(file) {|line| puts line}
+    room(file) {|num,line| @reply[num] = line}
+    room(file) {|num,line| @help[num] = line}
   end
 end
 
@@ -200,6 +202,14 @@ def emitStory num
   end
 end
 
+def emitDump title, hash
+  page "#{title} (dump)" do
+    paragraph "Debugging dump of the #{title} data structure."
+    hash.keys.sort{|a,b|a.to_i <=> b.to_i}.each do |key|
+      yield key, hash[key]
+    end
+  end
+end
 
 @dup ={}
 @rooms = []
@@ -209,8 +219,10 @@ end
 
 @dest = Hash.new {|h,k| h[k]={}}
 @words = Hash.new {|h,k| h[k]=[]}
-@words['1'] = '(auto)'
+@words['1'] = ['(auto)']
 
+@help = {}
+@reply = {}
 
 read
 # exit
@@ -219,9 +231,17 @@ read
   @title[num] = beTitle num
 end
 
-@@date = Time.now.to_i
+emitDump('Dest', @dest) {|k,v| paragraph "#{k}: #{@title[k]}"; json v}
+emitDump('Words', @words) {|k,v| paragraph "#{k}: #{v.map(&:downcase).join ', '}"}
+emitDump('Help', @help) {|k,v| paragraph "#{k}: #{capitalize v}"}
+emitDump('Reply', @reply) {|k,v| paragraph "#{k}: #{capitalize v}"}
+
+@@date -= 60
+
 @rooms.each do |num|
-  dump num
+  # dump num
   emitStory num
   @@date -= 1
 end
+
+puts 'end'
