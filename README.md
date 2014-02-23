@@ -10,7 +10,7 @@ of the text to a corresponding wiki with one page per adventure room.
 We are just now imagining how federated game authoring and game play 
 could be hosted on the federated wiki platform.
 
-Build
+build
 =====
 
 Create a federated wiki flat-file site. Clone this repository as 
@@ -23,7 +23,7 @@ If your new site has only these pages you can still find your way
 through the cave by examining Recent Changes. Each room appears
 as its shortened name. Click on any to start browsing.
 
-Play
+play
 ====
 
 We don't yet have the mechanisms to play the game. Each page includes
@@ -34,7 +34,7 @@ Several addional dump pages enumerate phrases that would be
 recognized or spoken in game play. These suggest the richness
 of the experience available in this first ever adventure.
 
-Future
+future
 ======
 
 We'd like to perform similar transformation of the fortran program
@@ -54,7 +54,7 @@ Long term play state would be in the brower. And the play
 landscape would be federated among all the sites contributing
 to the federated game.
 
-Literature
+literature
 ==========
 
 We're more interested in the literature of programming than 
