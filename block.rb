@@ -98,20 +98,26 @@ end
   break if line =~ /\tEND/
 end
 @blocks.pop
-# pp @blocks
 
 # find major sections, color labels
 
 @dot = []
-@dot << "\"READ THE PARAMETERS      \" [fillcolor=1 shape=box]\n"
-@dot << "\"TRAVEL                   \" [fillcolor=2 shape=box]\n"
-@dot << "\"DWARF STUFF              \" [fillcolor=3 shape=box]\n"
-@dot << "\"PLACE DESCRIPTOR         \" [fillcolor=4 shape=box]\n"
-@dot << "\"GO GET A NEW LOCATION    \" [fillcolor=5 shape=box]\n"
-@dot << "\"DO NEXT INPUT            \" [fillcolor=6 shape=box]\n"
-@dot << "\"CARRY                    \" [fillcolor=7 shape=box]\n"
-
 @labelColor = {}
+
+@sections = [
+  "READ THE PARAMETERS    ",
+  "TRAVEL                 ",
+  "DWARF STUFF            ",
+  "PLACE DESCRIPTOR       ",
+  "GO GET A NEW LOCATION  ",
+  "DO NEXT INPUT          ",
+  "CARRY                  "]
+
+@sections.each_with_index do |label, index|
+  @dot << "\"#{label}\" [fillcolor=#{index+1} shape=box];"
+  @dot << "\"#{@sections[index-1]}\" -> \"#{label}\" [color=lightGray]" if index > 0
+end
+
 @blocks.each do |block|
   block.each do |line|
     @color = '1' if line =~ /^C READ THE PARAMETERS/
@@ -127,38 +133,65 @@ end
   end
 end
 
-# find gotos, create nodes and arcs
+# define iterators over blocks
 
-def gotos
+def blocks
   @blocks.each do |block|
-    me = 'unk'
-    color = 'red'
+    label = color = nil
     block.each do |line|
       if line =~ /^(\d+)/
-        me = $1
-        color = @labelColor[me]
+        label = $1
+        color = @labelColor[label]
         break
       end
     end
-    @dot << "#{me} [fillcolor=#{color}]"
+    yield block, label, color
+  end
+end
+
+def lines
+  blocks do |block, label, color|
     block.each do |line|
-      if line =~ /\t(.*)GOTO\s+(\d+)$/
-        if $1 == ''
-          # @dot << "#{me} -> #{$2};"
-          yield me, $2
-        else
-          # @dot << "#{me} -> #{$2} [color=blue];"
-          yield me, $2, :conditional
-        end
+      yield line, label, color
+    end
+  end
+end
+
+def labels
+  lines do |line, label, color|
+    if line =~ /^(\d+)\t/
+      yield line, $1, color, label
+    end
+  end
+end
+
+def gotos
+  lines do |line, me, color|
+    if line =~ /\t(.*)GOTO\s+(\d+)$/
+      if $1 == ''
+        # @dot << "#{me} -> #{$2};"
+        yield me, $2
+      else
+        # @dot << "#{me} -> #{$2} [color=blue];"
+        yield me, $2, :conditional
       end
-      if line =~ /\tGOTO\((.*?)\)/
-        $1.scan(/(\d+)/) do |match|
-          # @dot << "#{me} -> #{match} [color=red]"
-          yield me, "#{match}", :computed
-        end
+    end
+    if line =~ /\tGOTO\((.*?)\)/
+      $1.scan(/(\d+)/) do |match|
+        # @dot << "#{me} -> #{match} [color=red]"
+        yield me, "#{match}", :computed
       end
     end
   end
+end
+
+
+# find gotos, create nodes and arcs
+
+@blockColor = {}
+blocks do |block, label, color|
+  @blockColor[label] = color
+  @dot << "#{label} [shape=box fillcolor=#{color}];"
 end
 
 @lableUses = Hash.new(0)
@@ -171,21 +204,22 @@ pp @labelCallColors
 
 gotos do |from, to, type|
   aka = to
+  next unless @blockColor[to] or (@labelColor[from] != @labelColor[to])
   if @labelColor[from] != @labelColor[to] and @labelCallColors[to].keys.length > 1
     aka = "\"#{to} #{@labelColor[from]}\""
-    @dot << "#{aka} [shape=box fillcolor=#{@labelColor[to]} label=#{to}]"
+    @dot << "#{aka} [shape=oval fillcolor=#{@labelColor[to]} label=#{to}]"
     puts @dot.last
   end
   case type
   when :conditional
     @dot << "#{from} -> #{aka} [color=blue];"
   when :computed
-    @dot << "#{from} -> #{aka} [color=red]"
+    @dot << "#{from} -> #{aka} [color=red];"
   else
-    @dot << "#{from} -> #{aka};"
+    @dot << "#{from} -> #{aka} [color=gray];"
   end
 end
 
-File.open('block.dot','w') {|file| file.puts "strict digraph {node[style=filled colorscheme=set27]; #{@dot.join "\n"}}\n"}
+File.open('block.dot','w') {|file| file.puts "strict digraph {node[style=filled colorscheme=set27 shape=circle]; #{@dot.join "\n"}}\n"}
 
 puts 'end'
