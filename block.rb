@@ -81,15 +81,18 @@ def page title
   File.utime Time.at(@@date), Time.at(@@date), path
 end
 
-def json obj
-  text = JSON.pretty_generate(obj)
+def code text
   add({'type' => 'code', 'text' => text, 'id' => random()})
 end
 
+def json obj
+  code JSON.pretty_generate(obj)
+end
 
-# find basic blocks
 
-@lines = File.read('advf4.77-03-31.txt').split /\n/
+# find basic blocks from lines with continuations removed
+
+@lines = File.read('advf4.77-03-31.txt').gsub(/\n\t\d/,'').split /\n/
 @blocks = []
 @blocks << @block = []
 @lines.each do |line|
@@ -102,6 +105,8 @@ end
 # find major sections, color labels
 
 @dot = []
+@dot << "node[style=filled colorscheme=set27 shape=circle];"
+
 @labelColor = {}
 
 @sections = [
@@ -120,13 +125,13 @@ end
 
 @blocks.each do |block|
   block.each do |line|
-    @color = '1' if line =~ /^C READ THE PARAMETERS/
-    @color = '2' if line =~ /^C TRAVEL/
-    @color = '3' if line =~ /^C DWARF STUFF/
-    @color = '4' if line =~ /^C PLACE DESCRIPTOR/
-    @color = '5' if line =~ /^C GO GET A NEW LOCATION/
-    @color = '6' if line =~ /^C DO NEXT INPUT/
-    @color = '7' if line =~ /^C CARRY/
+    @color = 1 if line =~ /^C READ THE PARAMETERS/
+    @color = 2 if line =~ /^C TRAVEL/
+    @color = 3 if line =~ /^C DWARF STUFF/
+    @color = 4 if line =~ /^C PLACE DESCRIPTOR/
+    @color = 5 if line =~ /^C GO GET A NEW LOCATION/
+    @color = 6 if line =~ /^C DO NEXT INPUT/
+    @color = 7 if line =~ /^C CARRY/
   end
   block.each do |line|
     @labelColor[$1]=@color if line =~ /^(\d+)\t/
@@ -166,20 +171,17 @@ def labels
 end
 
 def gotos
-  lines do |line, me, color|
+  lines do |line, label, color|
     if line =~ /\t(.*)GOTO\s+(\d+)$/
       if $1 == ''
-        # @dot << "#{me} -> #{$2};"
-        yield me, $2
+        yield label, $2, nil, line
       else
-        # @dot << "#{me} -> #{$2} [color=blue];"
-        yield me, $2, :conditional
+        yield label, $2, :conditional, line
       end
     end
     if line =~ /\tGOTO\((.*?)\)/
       $1.scan(/(\d+)/) do |match|
-        # @dot << "#{me} -> #{match} [color=red]"
-        yield me, "#{match}", :computed
+        yield label, "#{match}", :computed, line
       end
     end
   end
@@ -191,7 +193,8 @@ end
 @blockColor = {}
 blocks do |block, label, color|
   @blockColor[label] = color
-  @dot << "#{label} [shape=box fillcolor=#{color}];"
+  width = block.length > 10 ? 2 : 1
+  @dot << "#{label} [shape=box fillcolor=#{color} penwidth=#{width} URL=\"http://cave.fed.wiki.org/view/s#{label}\"];"
 end
 
 @lableUses = Hash.new(0)
@@ -200,7 +203,6 @@ gotos do |from, to, type|
   @lableUses[to] += 1
   @labelCallColors[to][@labelColor[from]] += 1
 end
-pp @labelCallColors
 
 gotos do |from, to, type|
   aka = to
@@ -208,7 +210,6 @@ gotos do |from, to, type|
   if @labelColor[from] != @labelColor[to] and @labelCallColors[to].keys.length > 1
     aka = "\"#{to} #{@labelColor[from]}\""
     @dot << "#{aka} [shape=oval fillcolor=#{@labelColor[to]} label=#{to}]"
-    puts @dot.last
   end
   case type
   when :conditional
@@ -220,6 +221,65 @@ gotos do |from, to, type|
   end
 end
 
-File.open('block.dot','w') {|file| file.puts "strict digraph {node[style=filled colorscheme=set27 shape=circle]; #{@dot.join "\n"}}\n"}
+
+
+File.open('block.dot','w') do |file|
+  dot = "strict digraph adventure { #{@dot.join "\n"} }\n"
+  file.puts dot
+end
+
+
+# create wiki pages for basic blocks
+
+@labelBlock = {}
+labels do | line, label, color, block |
+  @labelBlock[label] = block unless label == block
+end
+
+def lab num
+  "s#{num}"
+end
+
+def globals text
+  variables =  /(RTEXT|LLINE|IOBJ|ICHAIN|IPLACE|IFIXED|COND|PROP|ABB|LLINE|LTEXT|STEXT|KEY|DEFAULT|TRAVEL|TK|KTAB|ATAB|BTEXT|DSEEN|DLOC|ODLOC|DTRAV|RTEXT|JSPKT|IPLT|IFIXT)/
+  functions = /(SHIFT|YES|GETIN|SPEAK)/
+  vars = text.gsub(/DIMENSION .*$/,'').scan(variables).uniq
+  funs = text.scan(functions).uniq
+  vars = vars.length == 0 ? '' : "<br>Variables #{vars.map{|v|"[[#{v}]]"}.join ', '}."
+  funs = funs.length == 0 ? '' : "<br>Subroutines #{funs.map{|v|"[[#{v}]]"}.join ', '}."
+  vars + funs
+end
+
+blocks do | block, label, color|
+  @@date -= 1
+  page lab(label) do
+    paragraph capitalize("Block of #{block.length} lines in the section #{@sections[color-1]}.")+globals(block.join ' ')
+    code block.join "\n"
+
+    pagefold 'from'
+    gotos do |from, to, type, line|
+      if (@labelBlock[to]||to) == label and from != label
+        if to == label
+          paragraph capitalize "#{type||'unconditional'} from block [[#{lab from}]]."
+        else
+          paragraph capitalize "#{type||'unconditional'} to #{lab to} from block [[#{lab from}]]."
+        end
+        code line.strip.gsub(/\t/,' ')
+      end
+    end
+
+    pagefold 'to'
+    gotos do |from, to, type, line|
+      if from == label and (@labelBlock[to]||to) != label
+        if @labelBlock[to]
+          paragraph capitalize "#{type||'unconditional'} to #{lab to} of block [[#{lab @labelBlock[to]}]]."
+        else
+          paragraph capitalize "#{type||'unconditional'} to block [[#{lab to}]]."
+        end
+        code line.strip.gsub(/\t/,' ')
+      end
+    end
+  end
+end
 
 puts 'end'
