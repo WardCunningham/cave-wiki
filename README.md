@@ -23,6 +23,17 @@ If your new site has only these pages you can still find your way
 through the cave by examining Recent Changes. Each room appears
 as its shortened name. Click on any to start browsing.
 
+A second script creates pages explaining each basic block of code
+in the fortran adventure program. A graphviz dot file maps
+all the code blocks on a single page. Run the block builder
+with these ruby and graphviz commands.
+
+    ruby block.rb
+    cat block.dot | dot -Tsvg -oblock.rb
+
+The dot file can be viewed directly with the graphviz desktop
+application, a free download from graphviz.org.
+
 play
 ====
 
