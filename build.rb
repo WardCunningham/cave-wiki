@@ -185,7 +185,7 @@ def beTitle num
 end
 
 def beDescription num
-  capitalize @room[num]
+  capitalize "#{@room[num]} (#{num})"
 end
 
 def beDestination num
