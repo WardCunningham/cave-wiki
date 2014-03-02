@@ -218,7 +218,7 @@ def emitStory num
   page @title[num] do
     paragraph beDescription num
     if @short[num]
-      pagefold 'short'
+      # pagefold 'short'
       paragraph capitalize @short[num]
     end
     pagefold 'travel'
