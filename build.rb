@@ -160,6 +160,24 @@ def uniq num, text
   return text if @dup[text] = true
 end
 
+@actions = {}
+@actions['300'] = {'stmt' => 's22', 'cond' => 'chance', 'loc' => ['6', '5']}
+@actions['301'] = {'stmt' => 's23', 'cond' => 'grate', 'loc' => ['23', '9']}
+@actions['302'] = {'stmt' => 's24', 'cond' => 'grate', 'loc' => ['9', '8']}
+@actions['303'] = {'stmt' => 's25', 'cond' => 'nugget', 'loc' => ['20', '15']}
+@actions['304'] = {'stmt' => 's26', 'cond' => 'nugget', 'loc' => ['22', '14']}
+@actions['305'] = {'stmt' => 's31', 'cond' => 'stopping', 'loc' => []}
+@actions['306'] = {'stmt' => 's27', 'cond' => 'prop(12)', 'loc' => ['27', '31']}
+@actions['307'] = {'stmt' => 's28', 'cond' => 'snake', 'loc' => ['28', '32']}
+@actions['308'] = {'stmt' => 's29', 'cond' => 'snake', 'loc' => ['29', '32']}
+@actions['309'] = {'stmt' => 's30', 'cond' => 'snake', 'loc' => ['30', '32']}
+@actions['310'] = {'stmt' => 's33', 'cond' => 'grate', 'loc' => ['8', '9']}
+@actions['311'] = {'stmt' => 's34', 'cond' => 'chance', 'loc' => ['65', '68']}
+@actions['312'] = {'stmt' => 's36', 'cond' => 'chance', 'loc' => ['65', '39', '70']}
+@actions['313'] = {'stmt' => 's37', 'cond' => 'chance', 'loc' => ['66', '71', '72']}
+
+# interpret data as pages
+
 def beTitle num
   return if num.to_i>80
   text = @short[num] || shorten(@room[num])
@@ -170,12 +188,21 @@ def beDescription num
   capitalize @room[num]
 end
 
+def beDestination num
+  return "[[#{@title[num]}]]" if @title[num]
+  action = @actions[num]
+  return "(Unknown Action #{num})" unless action
+  titles = action['loc'].map do |dest|
+    "<br>[[#{@title[dest]}]]"
+  end
+  "depends on #{action['cond']} ([[#{action['stmt']}]])#{titles}"
+end
+
 def beChoice num, keys
-  action = "Action ##{num}"
   list = keys.map do |key|
     @words[key].map(&:downcase).join ' '
   end
-  "#{list.join ', '}<br>[[#{@title[num] || action}]]"
+  "#{list.join ', '}<br>#{beDestination num}"
 end
 
 def dump num
@@ -225,7 +252,8 @@ end
 @reply = {}
 
 read
-# exit
+
+# emit wiki pages
 
 @rooms.each do |num|
   @title[num] = beTitle num
@@ -242,6 +270,37 @@ emitDump('Reply', @reply) {|k,v| paragraph "#{k}: #{capitalize v}"}
   # dump num
   emitStory num
   @@date -= 1
+end
+
+# emit dot graphing rooms
+
+@dot = []
+def quote num
+  return num unless text = @title[num]
+  text= text.gsub(/(\S+) +(\S+) +/, '\1 \2\n')
+  "\"#{text}\""
+end
+@rooms.each do |num|
+  @dest[num].each do |dest,keys|
+    if @short[num]
+      @dot << "#{num} [fillcolor=paleGreen label=#{quote num} URL=\"#{@title[num]}\"];"
+    else
+      @dot << "#{num} [fillcolor=lightBlue label=#{quote num} URL=\"#{@title[num]}\"];"
+    end
+    word = @words[keys.first].first
+    word = keys.map{|key|@words[key].first}.join('\n')
+    @dot << "#{num} -> #{dest} [label=\"#{word.downcase}\"];"
+    if dest.to_i >= 300 and @actions[dest]
+      @actions[dest]['loc'].each do |jmp|
+        @dot << "#{dest}#{jmp} [label=#{dest} shape=box]"
+        @dot << "#{dest}#{jmp} -> #{jmp} [color=red label=\"#{@actions[dest]['cond']}\"]"
+      end
+    end
+  end
+end
+File.open('build.dot','w') do |file|
+  dot = "strict digraph adventure { node [style=filled] #{@dot.join "\n"} }\n"
+  file.puts dot
 end
 
 puts 'end'
