@@ -282,10 +282,11 @@ def quote num
 end
 @rooms.each do |num|
   @dest[num].each do |dest,keys|
+    url = "URL=\"http://cave.fed.wiki.org/view/#{slug @title[num]}\""
     if @short[num]
-      @dot << "#{num} [fillcolor=paleGreen label=#{quote num} URL=\"#{@title[num]}\"];"
+      @dot << "#{num} [fillcolor=paleGreen label=#{quote num} #{url}];"
     else
-      @dot << "#{num} [fillcolor=lightBlue label=#{quote num} URL=\"#{@title[num]}\"];"
+      @dot << "#{num} [fillcolor=lightBlue label=#{quote num} #{url}];"
     end
     word = @words[keys.first].first
     word = keys.map{|key|@words[key].first}.join('\n')
