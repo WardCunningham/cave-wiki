@@ -23,16 +23,31 @@ If your new site has only these pages you can still find your way
 through the cave by examining Recent Changes. Each room appears
 as its shortened name. Click on any to start browsing.
 
+A graphviz dot file maps all the rooms on a single page. 
+The dot file can be viewed directly with the graphviz desktop
+application, a free download from graphviz.org.
+A clickable svg map can be created with this command.
+
+    cat build.dot | dot -Tsvg -obuild.svg
+
+block
+=====
+
 A second script creates pages explaining each basic block of code
 in the fortran adventure program. A graphviz dot file maps
 all the code blocks on a single page. Run the block builder
 with these ruby and graphviz commands.
 
     ruby block.rb
-    cat block.dot | dot -Tsvg -oblock.rb
+    cat block.dot | dot -Tsvg -oblock.svg
 
-The dot file can be viewed directly with the graphviz desktop
-application, a free download from graphviz.org.
+browse
+======
+
+You can browse a recent build in svg or wiki.
+
+* Cave rooms. [svg](http://c2.com/wiki/build.svg) or  [wiki](http://cave.fed.wiki.org/view/welcome-visitors/view/colossal-cave-wiki/view/end-of-road-again)
+* Fortran blocks. [svg](http://c2.com/wiki/block.svg) or  [wiki](http://cave.fed.wiki.org/view/welcome-visitors/view/colossal-cave-wiki/view/fortran-main-program/view/s71)
 
 play
 ====
