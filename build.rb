@@ -259,6 +259,7 @@ read
   @title[num] = beTitle num
 end
 
+emitDump('Rooms', @room) {|k,v| paragraph "#{k}: #{capitalize v} #{beDestination k}"}
 emitDump('Dest', @dest) {|k,v| paragraph "#{k}: #{@title[k]}"; json v}
 emitDump('Words', @words) {|k,v| paragraph "#{k}: #{v.map(&:downcase).join ', '}"}
 emitDump('Help', @help) {|k,v| paragraph "#{k}: #{capitalize v}"}
