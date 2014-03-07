@@ -231,6 +231,8 @@ end
 
 # create wiki pages for basic blocks
 
+@data = JSON.parse File.read('data.json')
+
 @labelBlock = {}
 labels do | line, label, color, block |
   @labelBlock[label] = block unless label == block
@@ -250,11 +252,26 @@ def globals text
   vars + funs
 end
 
+def isSpoken text
+  return $1 if text =~ /\bJSPK=(\d+)\b/
+  return $1 if text =~ /CALL SPEAK\s*\((\d+)\)/
+  return [$1,$2,$3] if text =~ /\bYES\((\d+),(\d+),(\d+),/
+  nil
+end
+
 blocks do | block, label, color|
   @@date -= 1
   page lab(label) do
     paragraph capitalize("Block of #{block.length} lines in the section #{@sections[color-1]}.")+globals(block.join ' ')
     code block.join "\n"
+
+    speaking = block.map{|line| isSpoken line}.flatten.select{|num| not num.nil?}
+    if speaking.length > 0
+      pagefold 'speak'
+      speaking.each do |num|
+        paragraph "#{num}: #{capitalize @data['help'][num] || '(no message)'}"
+      end
+    end
 
     pagefold 'from'
     gotos do |from, to, type, line|
