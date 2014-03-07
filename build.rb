@@ -279,7 +279,7 @@ end
 def quote num
   return num unless text = @title[num]
   text= text.gsub(/(\S+) +(\S+) +/, '\1 \2\n')
-  "\"#{text}\""
+  "\"#{num}\\n#{text}\""
 end
 @rooms.each do |num|
   @dest[num].each do |dest,keys|

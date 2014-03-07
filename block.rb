@@ -38,7 +38,7 @@ def titalize text
 end
 
 def capitalize text
-  sentences = text.downcase.split '. '
+  sentences = text.downcase.split /\.\s+/
   sentences.map(&:capitalize).join '. '
 end
 
@@ -260,7 +260,7 @@ def isSpoken text
 end
 
 def isTravel text
-  return $1 if text =~ /\bL=(\d+)\b/
+  return $1 if text =~ /\bL=(\d+)$/
   nil
 end
 
