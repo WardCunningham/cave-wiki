@@ -259,6 +259,11 @@ def isSpoken text
   nil
 end
 
+def isTravel text
+  return $1 if text =~ /\bL=(\d+)\b/
+  nil
+end
+
 blocks do | block, label, color|
   @@date -= 1
   page lab(label) do
@@ -270,6 +275,14 @@ blocks do | block, label, color|
       pagefold 'speak'
       speaking.each do |num|
         paragraph "#{num}: #{capitalize @data['help'][num] || '(no message)'}"
+      end
+    end
+
+    travel = block.map{|line| isTravel line}.flatten.select{|num| not num.nil?}
+    if travel.length > 0
+      pagefold 'travel'
+      travel.each do |num|
+        paragraph "#{num}: [[#{ @data['title'][num]}]]"
       end
     end
 

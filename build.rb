@@ -309,6 +309,7 @@ File.open('data.json','w') do |file|
   data = {
     :room => @room,
     :short => @short,
+    :title => @title,
     :dest => @dest,
     :words => @words,
     :help => @help,

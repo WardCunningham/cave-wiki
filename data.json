@@ -29,101 +29,408 @@
     "57": "YOU'RE AT BRINK OF PIT."
   },
   "room": {
-    "66": "YOU ARE IN A ROOM WHOSE WALLS RESEMBLE SWISS CHEESE. OBVIOUS PASSAGES GO WEST,EAST,NE, AND NW. PART OF THE ROOM IS OCCUPIED BY A LARGE BEDROCK BLOCK.",
-    "18": "THIS IS A LOW ROOM WITH A CRUDE NOTE ON THE WALL. IT SAYS 'YOU WON'T GET IT UP THE STEPS'.",
-    "43": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "20": "YOU ARE AT THE BOTTOM OF THE PIT WITH A BROKEN NECK.",
-    "76": "THE CANYON HERE BECOMES TO TIGHT TO GO FURTHER SOUTH.",
-    "53": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "30": "YOU ARE IN THE WEST SIDE CHAMBER OF HALL OF MT KING. A PASSAGE CONTINUES WEST AND UP HERE.",
-    "4": "YOU ARE IN A VALLEY IN THE FOREST BESIDE A STREAM TUMBLING ALONG A ROCKY BED.",
-    "28": "YOU ARE IN A LOW N/S PASSAGE AT A HOLE IN THE FLOOR. THE HOLE GOES DOWN TO AN E/W PASSAGE.",
-    "38": "YOU ARE IN THE BOTTOM OF A SMALL PIT WITH A LITTLE STREAM, WHICH ENTERS AND EXITS THROUGH TINY SLITS.",
-    "63": "DEAD END",
-    "15": "YOU ARE AT ONE END OF A VAST HALL STRETCHING FORWARD OUT OF SIGHT TO THE WEST. THERE ARE OPENINGS TO EITHER SIDE. NEARBY, A WIDE STONE STAIRCASE LEADS DOWNWARD. THE HALL IS FILLED WITH WISPS OF WHITE MIST SWAYING TO AND FRO ALMOST AS IF ALIVE. A COLD WIND BLOWS UP THE STAIRCASE. THERE IS A PASSAGE AT THE TOP OF A DOME BEHIND YOU.",
-    "40": "YOU HAVE CRAWLED THROUGH A VERY LOW WIDE PASSAGE PARALLEL TO AND NORTH OF THE HALL OF MISTS.",
-    "73": "DEAD END CRAWL.",
-    "50": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "48": "DEAD END",
-    "1": "YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.",
-    "25": "YOU CAN'T GO THROUGH A LOCKED STEEL GRATE.",
-    "58": "DEAD END",
-    "35": "YOU ARE AT A WINDOW ON A HUGE PIT, WHICH GOES UP AND DOWN OUT OF SIGHT. A FLOOR IS INDISTINCTLY VISIBLE OVER 50 FEET BELOW. DIRECTLY OPPOSITE YOU AND 25 FEET AWAY THERE IS A SIMILAR WINDOW.",
-    "60": "YOU ARE AT THE EAST END OF A VERY LONG HALL APPARENTLY WITHOUT SIDE CHAMBERS. TO THE EAST A LOW WIDE CRAWL SLANTS UP. TO THE NORTH A ROUND TWO FOOT HOLE SLANTS DOWN.",
-    "12": "YOU ARE IN AN AWKWARD SLOPING EAST/WEST CANYON.",
-    "9": "YOU ARE IN A SMALL CHAMBER BENEATH A 3X3 STEEL GRATE TO THE SURFACE. A LOW CRAWL OVER COBBLES LEADS INWARD TO THE WEST.",
-    "70": "YOU ARE IN A SECRET N/S CANYON ABOVE A SIZABLE PASSAGE.",
-    "68": "YOU ARE IN A LARGE LOW CIRCULAR CHAMBER WHOSE FLOOR IS AN IMMENSE SLAB FALLEN FROM THE CEILING(SLAB ROOM). EAST AND WEST THERE ONCE WERE LARGE PASSAGES, BUT THEY ARE NOW FILLED WITH BOULDERS. LOW SMALL PASSAGES GO NORTH AND SOUTH, AND THE SOUTH ONE QUICKLY BENDS WEST AROUND THE BOULDERS.",
-    "45": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "22": "THE DOME IS UNCLIMBABLE",
-    "78": "THE CANYON RUNS INTO A MASS OF BOULDERS - DEAD END.",
-    "55": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "32": "YOU CAN'T GET BY THE SNAKE",
-    "6": "YOU ARE IN OPEN FOREST NEAR BOTH A VALLEY AND A ROAD.",
-    "65": "YOU ARE IN BEDQUILT, A LONG EAST/WEST PASSAGE WITH HOLES EVERYWHERE. TO EXPLORE AT RANDOM SELECT NORTH, SOUTH, UP, OR DOWN.",
-    "17": "YOU ARE ON THE EAST BANK OF A FISSURE SLICING CLEAR ACROSS THE HALL. THE MIST IS QUITE THICK HERE, AND THE FISSURE IS TOO WIDE TO JUMP.",
-    "42": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "75": "YOU ARE AT A WIDE PLACE IN A VERY TIGHT N/S CANYON.",
-    "52": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "3": "YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING.",
-    "27": "YOU ARE ON THE WEST SIDE OF THE FISSURE IN THE HALL OF MISTS.",
-    "37": "YOU ARE ON THE BRINK OF A SMALL CLEAN CLIMBABLE PIT. A CRAWL LEADS WEST.",
-    "62": "YOU ARE AT A CROSSOVER OF A HIGH N/S PASSAGE AND A LOW E/W ONE.",
-    "14": "AT YOUR FEET IS A SMALL PIT BREATHING TRACES OF WHITE MIST. AN EAST PASSAGE ENDS HERE EXCEPT FOR A SMALL CRACK LEADING ON.",
-    "72": "YOU ARE IN A LARGE LOW ROOM. CRAWLS LEAD N, SE, AND SW.",
-    "47": "DEAD END",
-    "24": "YOU DON'T FIT DOWN A TWO INCH HOLE!",
-    "57": "YOU ARE ON THE BRINK OF A THIRTY FOOT PIT WITH A MASSIVE ORANGE COLUMN DOWN ONE WALL. YOU COULD CLIMB DOWN HERE BUT YOU COULD NOT GET BACK UP. THE MAZE CONTINUES AT THIS LEVEL.",
-    "34": "YOU ARE IN A JUMBLE OF ROCK, WITH CRACKS EVERYWHERE.",
-    "11": "YOU ARE IN A DEBRIS ROOM, FILLED WITH STUFF WASHED IN FROM THE SURFACE. A LOW WIDE PASSAGE WITH COBBLES BECOMES PLUGGED WITH MUD AND DEBRIS HERE,BUT AN AWKWARD CANYON LEADS UPWARD AND WEST. A NOTE ON THE WALL SAYS 'MAGIC WORD XYZZY'.",
-    "8": "YOU ARE IN A 20 FOOT DEPRESSION FLOORED WITH BARE DIRT. SET INTO THE DIRT IS A STRONG STEEL GRATE MOUNTED IN CONCRETE. A DRY STREAMBED LEADS INTO THE DEPRESSION.",
-    "67": "YOU ARE IN THE TWOPIT ROOM. THE FLOOR HERE IS LITTERED WITH THIN ROCK SLABS, WHICH MAKE IT EASY TO DESCEND THE PITS. THERE IS A PATH HERE BYPASSING THE PITS TO CONNECT PASSAGES FROM EAST AND WEST.THERE ARE HOLES ALL OVER, BUT THE ONLY BIG ONE IS ON THE WALL DIRECTLY OVER THE EAST PIT WHERE YOU CAN'T GET TO IT.",
-    "19": "YOU ARE IN THE HALL OF THE MOUNTAIN KING, WITH PASSAGES OFF IN ALL DIRECTIONS.",
-    "44": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "21": "YOU DIDN'T MAKE IT",
     "77": "YOU ARE IN A TALL E/W CANYON. A LOW TIGHT CRAWL GOES 3 FEET NORTH AND SEEMS TO OPEN UP.",
+    "29": "YOU ARE IN THE SOUTH SIDE CHAMBER.",
     "54": "DEAD END",
     "31": "THERE IS NO WAY ACROSS THE FISSURE.",
-    "5": "YOU ARE IN OPEN FOREST, WITH A DEEP VALLEY TO ONE SIDE.",
-    "29": "YOU ARE IN THE SOUTH SIDE CHAMBER.",
+    "1": "YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.",
     "39": "YOU ARE IN A LARGE ROOM FULL OF DUSTY ROCKS. THERE IS A BIG HOLE IN THE FLOOR. THERE ARE CRACKS EVERYWHERE, AND A PASSAGE LEADING EAST.",
     "64": "YOU ARE AT A COMPLEX JUNCTION. A LOW HANDS AND KNEES PASSAGE FROM THE NORTH JOINS A HIGHER CRAWL FROM THE EAST TO MAKE  A WALKING PASSAGE GOING WEST THERE IS ALSO A LARGE ROOM ABOVE. THE AIR IS DAMP HERE. A SIGN IN MIDAIR HERE SAYS 'CAVE UNDER CONSTRUCTION BEYOND THIS POINT. PROCEED AT OWN RISK.'",
     "16": "THE CRACK IS FAR TOO SMALL FOR YOU TO FOLLOW.",
     "41": "YOU ARE AT THE WEST END OF HALL OF MISTS. A LOW WIDE CRAWL CONTINUES WEST AND ANOTHER GOES NORTH. TO THE SOUTH IS A LITTLE PASSAGE 6 FEET OFF THE FLOOR.",
+    "9": "YOU ARE IN A SMALL CHAMBER BENEATH A 3X3 STEEL GRATE TO THE SURFACE. A LOW CRAWL OVER COBBLES LEADS INWARD TO THE WEST.",
     "74": "YOU ARE IN SECRET CANYON WHICH HERE RUNS E/W. IT CROSSES OVER A VERY TIGHT CANYON 15 FEET BELOW. IF YOU GO DOWN YOU MAY NOT BE ABLE TO GET BACK UP",
     "51": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
     "49": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
-    "2": "YOU HAVE WALKED UP A HILL, STILL IN THE FOREST THE ROAD NOW SLOPES BACK DOWN THE OTHER SIDE OF THE HILL. THERE IS A BUILDING IN THE DISTANCE.",
     "59": "YOU HAVE CRAWLED THROUGH A VERY LOW WIDE PASSAGE PARALLEL TO AND NORTH OF THE HALL OF MISTS.",
     "36": "YOU ARE IN A DIRTY BROKEN PASSAGE. TO THE EAST IS A CRAWL. TO THE WEST IS A LARGE PASSAGE. ABOVE YOU IS A HOLE TO ANOTHER PASSAGE.",
     "61": "YOU ARE AT THE WEST END OF A VERY LONG FEATURELESS HALL.",
     "13": "YOU ARE IN A SPLENDID CHAMBER THIRTY FEET HIGH. THE WALLS ARE FROZEN RIVERS OF ORANGE STONE. AN AWKWARD CANYON AND A GOOD PASSAGE EXIT FROM EAST AND WEST SIDES OF THE CHAMBER.",
+    "6": "YOU ARE IN OPEN FOREST NEAR BOTH A VALLEY AND A ROAD.",
     "71": "YOU ARE IN SECRET CANYON AT A JUNCTION OF THREE CANYONS, BEARING NORTH, SOUTH, AND SE. THE NORTH ONE IS AS TALL AS THE OTHER TWO COMBINED.",
     "69": "YOU ARE IN A SECRET N/S CANYON ABOVE A LARGE ROOM.",
-    "46": "DEAD END",
     "23": "YOU CAN'T GO IN THROUGH A LOCKED STEEL GRATE!",
+    "46": "DEAD END",
     "79": "THE STREAM FLOWS OUT THROUGH A PAIR OF 1 FOOT DIAMETER SEWER PIPES. IT WOULD BE ADVISABLE TO USE THE DOOR.",
     "56": "DEAD END",
     "33": "YOU ARE IN A LARGE ROOM, WITH A PASSAGE TO THE SOUTH, A PASSAGE TO THE WEST, AND A WALL OF BROKEN ROCK TO THE EAST. THERE IS A LARGE 'Y2' ON A ROCK IN ROOMS CENTER.",
     "10": "YOU ARE CRAWLING OVER COBBLES IN A LOW PASSAGE. THERE IS A DIM LIGHT AT THE EAST END OF THE PASSAGE.",
-    "7": "AT YOUR FEET ALL THE WATER OF THE STREAM SPLASHES INTO A 2 INCH SLIT IN THE ROCK. DOWNSTREAM THE STREAMBED IS BARE ROCK."
+    "3": "YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING.",
+    "20": "YOU ARE AT THE BOTTOM OF THE PIT WITH A BROKEN NECK.",
+    "66": "YOU ARE IN A ROOM WHOSE WALLS RESEMBLE SWISS CHEESE. OBVIOUS PASSAGES GO WEST,EAST,NE, AND NW. PART OF THE ROOM IS OCCUPIED BY A LARGE BEDROCK BLOCK.",
+    "18": "THIS IS A LOW ROOM WITH A CRUDE NOTE ON THE WALL. IT SAYS 'YOU WON'T GET IT UP THE STEPS'.",
+    "43": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "76": "THE CANYON HERE BECOMES TO TIGHT TO GO FURTHER SOUTH.",
+    "28": "YOU ARE IN A LOW N/S PASSAGE AT A HOLE IN THE FLOOR. THE HOLE GOES DOWN TO AN E/W PASSAGE.",
+    "53": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "30": "YOU ARE IN THE WEST SIDE CHAMBER OF HALL OF MT KING. A PASSAGE CONTINUES WEST AND UP HERE.",
+    "38": "YOU ARE IN THE BOTTOM OF A SMALL PIT WITH A LITTLE STREAM, WHICH ENTERS AND EXITS THROUGH TINY SLITS.",
+    "63": "DEAD END",
+    "15": "YOU ARE AT ONE END OF A VAST HALL STRETCHING FORWARD OUT OF SIGHT TO THE WEST. THERE ARE OPENINGS TO EITHER SIDE. NEARBY, A WIDE STONE STAIRCASE LEADS DOWNWARD. THE HALL IS FILLED WITH WISPS OF WHITE MIST SWAYING TO AND FRO ALMOST AS IF ALIVE. A COLD WIND BLOWS UP THE STAIRCASE. THERE IS A PASSAGE AT THE TOP OF A DOME BEHIND YOU.",
+    "40": "YOU HAVE CRAWLED THROUGH A VERY LOW WIDE PASSAGE PARALLEL TO AND NORTH OF THE HALL OF MISTS.",
+    "8": "YOU ARE IN A 20 FOOT DEPRESSION FLOORED WITH BARE DIRT. SET INTO THE DIRT IS A STRONG STEEL GRATE MOUNTED IN CONCRETE. A DRY STREAMBED LEADS INTO THE DEPRESSION.",
+    "73": "DEAD END CRAWL.",
+    "25": "YOU CAN'T GO THROUGH A LOCKED STEEL GRATE.",
+    "50": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "48": "DEAD END",
+    "58": "DEAD END",
+    "35": "YOU ARE AT A WINDOW ON A HUGE PIT, WHICH GOES UP AND DOWN OUT OF SIGHT. A FLOOR IS INDISTINCTLY VISIBLE OVER 50 FEET BELOW. DIRECTLY OPPOSITE YOU AND 25 FEET AWAY THERE IS A SIMILAR WINDOW.",
+    "60": "YOU ARE AT THE EAST END OF A VERY LONG HALL APPARENTLY WITHOUT SIDE CHAMBERS. TO THE EAST A LOW WIDE CRAWL SLANTS UP. TO THE NORTH A ROUND TWO FOOT HOLE SLANTS DOWN.",
+    "12": "YOU ARE IN AN AWKWARD SLOPING EAST/WEST CANYON.",
+    "5": "YOU ARE IN OPEN FOREST, WITH A DEEP VALLEY TO ONE SIDE.",
+    "70": "YOU ARE IN A SECRET N/S CANYON ABOVE A SIZABLE PASSAGE.",
+    "68": "YOU ARE IN A LARGE LOW CIRCULAR CHAMBER WHOSE FLOOR IS AN IMMENSE SLAB FALLEN FROM THE CEILING(SLAB ROOM). EAST AND WEST THERE ONCE WERE LARGE PASSAGES, BUT THEY ARE NOW FILLED WITH BOULDERS. LOW SMALL PASSAGES GO NORTH AND SOUTH, AND THE SOUTH ONE QUICKLY BENDS WEST AROUND THE BOULDERS.",
+    "22": "THE DOME IS UNCLIMBABLE",
+    "45": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "78": "THE CANYON RUNS INTO A MASS OF BOULDERS - DEAD END.",
+    "55": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "32": "YOU CAN'T GET BY THE SNAKE",
+    "2": "YOU HAVE WALKED UP A HILL, STILL IN THE FOREST THE ROAD NOW SLOPES BACK DOWN THE OTHER SIDE OF THE HILL. THERE IS A BUILDING IN THE DISTANCE.",
+    "65": "YOU ARE IN BEDQUILT, A LONG EAST/WEST PASSAGE WITH HOLES EVERYWHERE. TO EXPLORE AT RANDOM SELECT NORTH, SOUTH, UP, OR DOWN.",
+    "17": "YOU ARE ON THE EAST BANK OF A FISSURE SLICING CLEAR ACROSS THE HALL. THE MIST IS QUITE THICK HERE, AND THE FISSURE IS TOO WIDE TO JUMP.",
+    "42": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "75": "YOU ARE AT A WIDE PLACE IN A VERY TIGHT N/S CANYON.",
+    "27": "YOU ARE ON THE WEST SIDE OF THE FISSURE IN THE HALL OF MISTS.",
+    "52": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.",
+    "37": "YOU ARE ON THE BRINK OF A SMALL CLEAN CLIMBABLE PIT. A CRAWL LEADS WEST.",
+    "62": "YOU ARE AT A CROSSOVER OF A HIGH N/S PASSAGE AND A LOW E/W ONE.",
+    "14": "AT YOUR FEET IS A SMALL PIT BREATHING TRACES OF WHITE MIST. AN EAST PASSAGE ENDS HERE EXCEPT FOR A SMALL CRACK LEADING ON.",
+    "7": "AT YOUR FEET ALL THE WATER OF THE STREAM SPLASHES INTO A 2 INCH SLIT IN THE ROCK. DOWNSTREAM THE STREAMBED IS BARE ROCK.",
+    "72": "YOU ARE IN A LARGE LOW ROOM. CRAWLS LEAD N, SE, AND SW.",
+    "24": "YOU DON'T FIT DOWN A TWO INCH HOLE!",
+    "47": "DEAD END",
+    "57": "YOU ARE ON THE BRINK OF A THIRTY FOOT PIT WITH A MASSIVE ORANGE COLUMN DOWN ONE WALL. YOU COULD CLIMB DOWN HERE BUT YOU COULD NOT GET BACK UP. THE MAZE CONTINUES AT THIS LEVEL.",
+    "34": "YOU ARE IN A JUMBLE OF ROCK, WITH CRACKS EVERYWHERE.",
+    "11": "YOU ARE IN A DEBRIS ROOM, FILLED WITH STUFF WASHED IN FROM THE SURFACE. A LOW WIDE PASSAGE WITH COBBLES BECOMES PLUGGED WITH MUD AND DEBRIS HERE,BUT AN AWKWARD CANYON LEADS UPWARD AND WEST. A NOTE ON THE WALL SAYS 'MAGIC WORD XYZZY'.",
+    "4": "YOU ARE IN A VALLEY IN THE FOREST BESIDE A STREAM TUMBLING ALONG A ROCKY BED.",
+    "21": "YOU DIDN'T MAKE IT",
+    "67": "YOU ARE IN THE TWOPIT ROOM. THE FLOOR HERE IS LITTERED WITH THIN ROCK SLABS, WHICH MAKE IT EASY TO DESCEND THE PITS. THERE IS A PATH HERE BYPASSING THE PITS TO CONNECT PASSAGES FROM EAST AND WEST.THERE ARE HOLES ALL OVER, BUT THE ONLY BIG ONE IS ON THE WALL DIRECTLY OVER THE EAST PIT WHERE YOU CAN'T GET TO IT.",
+    "19": "YOU ARE IN THE HALL OF THE MOUNTAIN KING, WITH PASSAGES OFF IN ALL DIRECTIONS.",
+    "44": "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE."
   },
   "dest": {
+    "77": {
+      "78": [
+        "44"
+      ],
+      "75": [
+        "43"
+      ],
+      "66": [
+        "45"
+      ]
+    },
+    "29": {
+      "19": [
+        "38",
+        "11",
+        "45"
+      ]
+    },
+    "54": {
+      "53": [
+        "43",
+        "11"
+      ]
+    },
+    "31": {
+      "17": [
+        "1"
+      ]
+    },
+    "1": {
+      "8": [
+        "49"
+      ],
+      "5": [
+        "6",
+        "45",
+        "43"
+      ],
+      "4": [
+        "4",
+        "5",
+        "13",
+        "14",
+        "46",
+        "30"
+      ],
+      "3": [
+        "3",
+        "12",
+        "19",
+        "43"
+      ],
+      "2": [
+        "2",
+        "44"
+      ]
+    },
+    "39": {
+      "65": [
+        "70"
+      ],
+      "64": [
+        "30",
+        "52",
+        "58"
+      ],
+      "36": [
+        "43"
+      ]
+    },
+    "64": {
+      "65": [
+        "44"
+      ],
+      "39": [
+        "29",
+        "56",
+        "59"
+      ]
+    },
+    "16": {
+      "14": [
+        "1"
+      ]
+    },
+    "41": {
+      "42": [
+        "46",
+        "29",
+        "23",
+        "56"
+      ],
+      "60": [
+        "44",
+        "17"
+      ],
+      "59": [
+        "45"
+      ],
+      "27": [
+        "43"
+      ]
+    },
+    "9": {
+      "11": [
+        "51"
+      ],
+      "14": [
+        "31"
+      ],
+      "10": [
+        "17",
+        "18",
+        "19",
+        "44"
+      ],
+      "302": [
+        "11",
+        "12"
+      ]
+    },
+    "74": {
+      "75": [
+        "30"
+      ],
+      "19": [
+        "43"
+      ],
+      "69": [
+        "44"
+      ]
+    },
+    "51": {
+      "49": [
+        "44"
+      ],
+      "53": [
+        "46"
+      ],
+      "52": [
+        "43"
+      ]
+    },
+    "49": {
+      "51": [
+        "44"
+      ],
+      "50": [
+        "30",
+        "43"
+      ]
+    },
+    "59": {
+      "27": [
+        "1"
+      ]
+    },
+    "36": {
+      "39": [
+        "44"
+      ],
+      "37": [
+        "43",
+        "17"
+      ],
+      "28": [
+        "29",
+        "52"
+      ]
+    },
+    "61": {
+      "60": [
+        "43",
+        "11"
+      ]
+    },
+    "13": {
+      "14": [
+        "23",
+        "31",
+        "44"
+      ],
+      "12": [
+        "25",
+        "305",
+        "43"
+      ],
+      "11": [
+        "51"
+      ],
+      "310": [
+        "49"
+      ]
+    },
+    "6": {
+      "5": [
+        "6",
+        "46"
+      ],
+      "4": [
+        "9",
+        "43",
+        "44",
+        "30"
+      ],
+      "1": [
+        "2",
+        "45"
+      ]
+    },
+    "71": {
+      "70": [
+        "46"
+      ],
+      "65": [
+        "62"
+      ],
+      "39": [
+        "29"
+      ]
+    },
+    "69": {
+      "74": [
+        "46"
+      ],
+      "68": [
+        "30"
+      ]
+    },
+    "23": {
+      "8": [
+        "1"
+      ]
+    },
+    "46": {
+      "45": [
+        "44",
+        "11"
+      ]
+    },
+    "79": {
+      "3": [
+        "1"
+      ]
+    },
+    "56": {
+      "55": [
+        "29",
+        "11"
+      ]
+    },
+    "33": {
+      "3": [
+        "65"
+      ],
+      "35": [
+        "44"
+      ],
+      "34": [
+        "43",
+        "53",
+        "54"
+      ],
+      "28": [
+        "46"
+      ]
+    },
+    "10": {
+      "9": [
+        "11",
+        "20",
+        "21",
+        "43"
+      ],
+      "14": [
+        "31"
+      ],
+      "11": [
+        "19",
+        "22",
+        "44",
+        "51"
+      ]
+    },
+    "3": {
+      "79": [
+        "5",
+        "14"
+      ],
+      "1": [
+        "3",
+        "11",
+        "32",
+        "44"
+      ],
+      "11": [
+        "48"
+      ],
+      "33": [
+        "65"
+      ]
+    },
+    "20": {
+      "26": [
+        "1"
+      ]
+    },
     "66": {
       "77": [
         "25"
-      ],
-      "314": [
-        "46"
-      ],
-      "313": [
-        "45"
       ],
       "67": [
         "44"
       ],
       "65": [
         "60"
+      ],
+      "314": [
+        "46"
+      ],
+      "313": [
+        "45"
       ]
     },
     "18": {
@@ -145,13 +452,22 @@
         "44"
       ]
     },
-    "20": {
-      "26": [
-        "1"
-      ]
-    },
     "76": {
       "75": [
+        "45"
+      ]
+    },
+    "28": {
+      "19": [
+        "38",
+        "11",
+        "46"
+      ],
+      "36": [
+        "30",
+        "52"
+      ],
+      "33": [
         "45"
       ]
     },
@@ -175,40 +491,6 @@
       "62": [
         "44",
         "29"
-      ]
-    },
-    "4": {
-      "8": [
-        "49"
-      ],
-      "7": [
-        "5",
-        "46",
-        "30"
-      ],
-      "5": [
-        "6",
-        "43",
-        "44",
-        "29"
-      ],
-      "1": [
-        "4",
-        "45"
-      ]
-    },
-    "28": {
-      "19": [
-        "38",
-        "11",
-        "46"
-      ],
-      "36": [
-        "30",
-        "52"
-      ],
-      "33": [
-        "45"
       ]
     },
     "38": {
@@ -258,9 +540,36 @@
         "1"
       ]
     },
+    "8": {
+      "7": [
+        "4",
+        "13",
+        "45"
+      ],
+      "1": [
+        "12"
+      ],
+      "5": [
+        "6",
+        "43",
+        "44",
+        "46"
+      ],
+      "301": [
+        "3",
+        "5",
+        "19",
+        "30"
+      ]
+    },
     "73": {
       "72": [
         "46"
+      ]
+    },
+    "25": {
+      "9": [
+        "1"
       ]
     },
     "50": {
@@ -279,39 +588,6 @@
       "44": [
         "29",
         "11"
-      ]
-    },
-    "1": {
-      "8": [
-        "49"
-      ],
-      "5": [
-        "6",
-        "45",
-        "43"
-      ],
-      "4": [
-        "4",
-        "5",
-        "13",
-        "14",
-        "46",
-        "30"
-      ],
-      "3": [
-        "3",
-        "12",
-        "19",
-        "43"
-      ],
-      "2": [
-        "2",
-        "44"
-      ]
-    },
-    "25": {
-      "9": [
-        "1"
       ]
     },
     "58": {
@@ -357,22 +633,21 @@
         "49"
       ]
     },
-    "9": {
-      "11": [
-        "51"
+    "5": {
+      "5": [
+        "44",
+        "46"
       ],
-      "14": [
-        "31"
+      "4": [
+        "9",
+        "43",
+        "30"
       ],
-      "10": [
-        "17",
-        "18",
-        "19",
-        "44"
-      ],
-      "302": [
-        "11",
-        "12"
+      "300": [
+        "6",
+        "7",
+        "8",
+        "45"
       ]
     },
     "70": {
@@ -388,6 +663,11 @@
         "46"
       ]
     },
+    "22": {
+      "15": [
+        "1"
+      ]
+    },
     "45": {
       "47": [
         "46"
@@ -397,11 +677,6 @@
       ],
       "43": [
         "45"
-      ]
-    },
-    "22": {
-      "15": [
-        "1"
       ]
     },
     "78": {
@@ -425,29 +700,23 @@
         "1"
       ]
     },
-    "6": {
+    "2": {
       "5": [
         "6",
+        "45",
         "46"
       ],
-      "4": [
-        "9",
-        "43",
-        "44",
-        "30"
-      ],
       "1": [
+        "8",
         "2",
-        "45"
+        "12",
+        "7",
+        "43",
+        "45",
+        "30"
       ]
     },
     "65": {
-      "312": [
-        "29"
-      ],
-      "311": [
-        "46"
-      ],
       "68": [
         "61"
       ],
@@ -456,6 +725,12 @@
       ],
       "64": [
         "43"
+      ],
+      "312": [
+        "29"
+      ],
+      "311": [
+        "46"
       ]
     },
     "17": {
@@ -495,6 +770,19 @@
         "46"
       ]
     },
+    "27": {
+      "41": [
+        "44"
+      ],
+      "40": [
+        "45"
+      ],
+      "17": [
+        "8",
+        "11",
+        "38"
+      ]
+    },
     "52": {
       "55": [
         "43"
@@ -507,37 +795,6 @@
       ],
       "50": [
         "45"
-      ]
-    },
-    "3": {
-      "1": [
-        "3",
-        "11",
-        "32",
-        "44"
-      ],
-      "79": [
-        "5",
-        "14"
-      ],
-      "11": [
-        "48"
-      ],
-      "33": [
-        "65"
-      ]
-    },
-    "27": {
-      "41": [
-        "44"
-      ],
-      "40": [
-        "45"
-      ],
-      "17": [
-        "8",
-        "11",
-        "38"
       ]
     },
     "37": {
@@ -586,6 +843,32 @@
         "34"
       ]
     },
+    "7": {
+      "8": [
+        "5",
+        "15",
+        "16",
+        "46",
+        "30"
+      ],
+      "5": [
+        "6",
+        "43",
+        "44"
+      ],
+      "4": [
+        "4",
+        "45"
+      ],
+      "1": [
+        "12"
+      ],
+      "24": [
+        "47",
+        "14",
+        "30"
+      ]
+    },
     "72": {
       "73": [
         "45"
@@ -594,15 +877,15 @@
         "63"
       ]
     },
+    "24": {
+      "7": [
+        "1"
+      ]
+    },
     "47": {
       "45": [
         "45",
         "11"
-      ]
-    },
-    "24": {
-      "7": [
-        "1"
       ]
     },
     "57": {
@@ -650,26 +933,29 @@
         "49"
       ]
     },
-    "8": {
-      "7": [
-        "4",
-        "13",
-        "45"
+    "4": {
+      "8": [
+        "49"
       ],
-      "1": [
-        "12"
+      "7": [
+        "5",
+        "46",
+        "30"
       ],
       "5": [
         "6",
         "43",
         "44",
-        "46"
+        "29"
       ],
-      "301": [
-        "3",
-        "5",
-        "19",
-        "30"
+      "1": [
+        "4",
+        "45"
+      ]
+    },
+    "21": {
+      "26": [
+        "1"
       ]
     },
     "67": {
@@ -715,337 +1001,14 @@
       "50": [
         "46"
       ]
-    },
-    "21": {
-      "26": [
-        "1"
-      ]
-    },
-    "77": {
-      "78": [
-        "44"
-      ],
-      "75": [
-        "43"
-      ],
-      "66": [
-        "45"
-      ]
-    },
-    "54": {
-      "53": [
-        "43",
-        "11"
-      ]
-    },
-    "31": {
-      "17": [
-        "1"
-      ]
-    },
-    "5": {
-      "5": [
-        "44",
-        "46"
-      ],
-      "4": [
-        "9",
-        "43",
-        "30"
-      ],
-      "300": [
-        "6",
-        "7",
-        "8",
-        "45"
-      ]
-    },
-    "29": {
-      "19": [
-        "38",
-        "11",
-        "45"
-      ]
-    },
-    "39": {
-      "65": [
-        "70"
-      ],
-      "64": [
-        "30",
-        "52",
-        "58"
-      ],
-      "36": [
-        "43"
-      ]
-    },
-    "64": {
-      "65": [
-        "44"
-      ],
-      "39": [
-        "29",
-        "56",
-        "59"
-      ]
-    },
-    "16": {
-      "14": [
-        "1"
-      ]
-    },
-    "41": {
-      "27": [
-        "43"
-      ],
-      "42": [
-        "46",
-        "29",
-        "23",
-        "56"
-      ],
-      "60": [
-        "44",
-        "17"
-      ],
-      "59": [
-        "45"
-      ]
-    },
-    "74": {
-      "75": [
-        "30"
-      ],
-      "19": [
-        "43"
-      ],
-      "69": [
-        "44"
-      ]
-    },
-    "51": {
-      "49": [
-        "44"
-      ],
-      "53": [
-        "46"
-      ],
-      "52": [
-        "43"
-      ]
-    },
-    "49": {
-      "51": [
-        "44"
-      ],
-      "50": [
-        "30",
-        "43"
-      ]
-    },
-    "2": {
-      "5": [
-        "6",
-        "45",
-        "46"
-      ],
-      "1": [
-        "8",
-        "2",
-        "12",
-        "7",
-        "43",
-        "45",
-        "30"
-      ]
-    },
-    "59": {
-      "27": [
-        "1"
-      ]
-    },
-    "36": {
-      "28": [
-        "29",
-        "52"
-      ],
-      "39": [
-        "44"
-      ],
-      "37": [
-        "43",
-        "17"
-      ]
-    },
-    "61": {
-      "60": [
-        "43",
-        "11"
-      ]
-    },
-    "13": {
-      "14": [
-        "23",
-        "31",
-        "44"
-      ],
-      "12": [
-        "25",
-        "305",
-        "43"
-      ],
-      "11": [
-        "51"
-      ],
-      "310": [
-        "49"
-      ]
-    },
-    "71": {
-      "70": [
-        "46"
-      ],
-      "65": [
-        "62"
-      ],
-      "39": [
-        "29"
-      ]
-    },
-    "69": {
-      "74": [
-        "46"
-      ],
-      "68": [
-        "30"
-      ]
-    },
-    "46": {
-      "45": [
-        "44",
-        "11"
-      ]
-    },
-    "23": {
-      "8": [
-        "1"
-      ]
-    },
-    "79": {
-      "3": [
-        "1"
-      ]
-    },
-    "56": {
-      "55": [
-        "29",
-        "11"
-      ]
-    },
-    "33": {
-      "28": [
-        "46"
-      ],
-      "3": [
-        "65"
-      ],
-      "35": [
-        "44"
-      ],
-      "34": [
-        "43",
-        "53",
-        "54"
-      ]
-    },
-    "10": {
-      "9": [
-        "11",
-        "20",
-        "21",
-        "43"
-      ],
-      "14": [
-        "31"
-      ],
-      "11": [
-        "19",
-        "22",
-        "44",
-        "51"
-      ]
-    },
-    "7": {
-      "24": [
-        "47",
-        "14",
-        "30"
-      ],
-      "8": [
-        "5",
-        "15",
-        "16",
-        "46",
-        "30"
-      ],
-      "5": [
-        "6",
-        "43",
-        "44"
-      ],
-      "4": [
-        "4",
-        "45"
-      ],
-      "1": [
-        "12"
-      ]
     }
   },
   "words": {
-    "11": [
-      "OUT",
-      "OUTSIDE",
-      "EXIT",
-      "LEAVE"
-    ],
-    "7": [
-      "FORWARD",
-      "CONTINUE",
-      "ONWARD"
-    ],
-    "69": [
-      "CROSS"
-    ],
-    "1023": [
-      "CHEST",
-      "BOX",
-      "TREASURE"
-    ],
-    "3079": [
-      "FUCK"
-    ],
-    "1017": [
-      "DWARVES",
-      "DWARF"
-    ],
-    "4": [
-      "UPSTREAM"
-    ],
-    "1020": [
-      "WATER",
-      "BOTTLE"
-    ],
-    "1014": [
-      "SILVER",
-      "BARS"
+    "66": [
+      "SECRET"
     ],
     "1": [
       "(auto)"
-    ],
-    "66": [
-      "SECRET"
     ],
     "57": [
       "LOOK",
@@ -1053,23 +1016,8 @@
       "TOUCH",
       "LOOKAT"
     ],
-    "1011": [
-      "SNAKE"
-    ],
-    "3067": [
-      "BLAST"
-    ],
     "63": [
       "SW"
-    ],
-    "1005": [
-      "ROD"
-    ],
-    "54": [
-      "BROKE"
-    ],
-    "3064": [
-      "TREE"
     ],
     "60": [
       "NE"
@@ -1077,9 +1025,21 @@
     "48": [
       "XYZZY"
     ],
-    "1002": [
-      "LAMP",
-      "HEADLAMP"
+    "54": [
+      "BROKE"
+    ],
+    "1023": [
+      "CHEST",
+      "BOX",
+      "TREASURE"
+    ],
+    "45": [
+      "NORTH",
+      "N"
+    ],
+    "1017": [
+      "DWARVES",
+      "DWARF"
     ],
     "51": [
       "DEBRIS"
@@ -1087,34 +1047,31 @@
     "39": [
       "JUMP"
     ],
-    "3049": [
-      "THROW"
-    ],
-    "45": [
-      "NORTH",
-      "N"
-    ],
-    "36": [
-      "LEFT"
+    "1020": [
+      "WATER",
+      "BOTTLE"
     ],
     "42": [
       "ACROSS"
     ],
+    "1014": [
+      "SILVER",
+      "BARS"
+    ],
+    "36": [
+      "LEFT"
+    ],
+    "1011": [
+      "SNAKE"
+    ],
+    "3079": [
+      "FUCK"
+    ],
     "33": [
       "CRACK"
     ],
-    "2016": [
-      "RUB"
-    ],
-    "2007": [
-      "LIGHT",
-      "ON"
-    ],
     "24": [
       "LOW"
-    ],
-    "2013": [
-      "POUR"
     ],
     "30": [
       "DOWN",
@@ -1124,14 +1081,321 @@
     "18": [
       "COBBL"
     ],
-    "2004": [
-      "UNLOCK",
-      "OPEN",
-      "LIFT"
+    "305": [
+
     ],
     "21": [
       "NULL",
       "NOWHERE"
+    ],
+    "1007": [
+      "BIRD"
+    ],
+    "15": [
+      "ROCK"
+    ],
+    "3067": [
+      "BLAST"
+    ],
+    "12": [
+      "BUILD",
+      "BLD",
+      "HOUSE"
+    ],
+    "3064": [
+      "TREE"
+    ],
+    "1004": [
+      "CAGE"
+    ],
+    "2014": [
+      "EAT"
+    ],
+    "2008": [
+      "EXTINGUISH",
+      "OFF"
+    ],
+    "3049": [
+      "THROW"
+    ],
+    "1001": [
+      "KEYS",
+      "KEY"
+    ],
+    "2011": [
+      "WALK",
+      "RUN",
+      "TRAVEL",
+      "GO",
+      "PROCEED",
+      "CONTINUE",
+      "EXPLORE",
+      "GOTO",
+      "FOLLOW"
+    ],
+    "8": [
+      "BACK",
+      "RETURN",
+      "RETREAT"
+    ],
+    "2005": [
+      "NOTHING",
+      "HOLD"
+    ],
+    "5": [
+      "DOWNSTREAM"
+    ],
+    "2002": [
+      "RELEASE",
+      "FREE",
+      "DISCARD",
+      "DROP",
+      "DUMP"
+    ],
+    "67": [
+      "CAVE"
+    ],
+    "2": [
+      "ROAD"
+    ],
+    "70": [
+      "BEDQUILT"
+    ],
+    "58": [
+      "FLOOR"
+    ],
+    "64": [
+      "NW"
+    ],
+    "55": [
+      "Y2"
+    ],
+    "61": [
+      "SLAB",
+      "SLABROOM"
+    ],
+    "49": [
+      "DEPRESSION"
+    ],
+    "1018": [
+      "KNIFE",
+      "KNIVES",
+      "ROCK",
+      "WEAPON",
+      "BOULDER"
+    ],
+    "52": [
+      "HOLE"
+    ],
+    "46": [
+      "SOUTH",
+      "S"
+    ],
+    "1015": [
+      "JEWELS"
+    ],
+    "37": [
+      "RIGHT"
+    ],
+    "1021": [
+      "AXE"
+    ],
+    "43": [
+      "EAST",
+      "E"
+    ],
+    "34": [
+      "STEPS"
+    ],
+    "40": [
+      "MAGIC"
+    ],
+    "1012": [
+      "FISSURE"
+    ],
+    "19": [
+      "INWARD",
+      "INSIDE",
+      "IN"
+    ],
+    "25": [
+      "CANYON"
+    ],
+    "31": [
+      "PIT"
+    ],
+    "3068": [
+      "LOST"
+    ],
+    "22": [
+      "DARK"
+    ],
+    "16": [
+      "BED"
+    ],
+    "1005": [
+      "ROD"
+    ],
+    "13": [
+      "GULLY"
+    ],
+    "2009": [
+      "STRIKE"
+    ],
+    "1002": [
+      "LAMP",
+      "HEADLAMP"
+    ],
+    "2015": [
+      "DRINK"
+    ],
+    "10": [
+      "STAIR"
+    ],
+    "2006": [
+      "LOCK",
+      "CLOSE"
+    ],
+    "2012": [
+      "ATTACK",
+      "KILL",
+      "STAB",
+      "FIGHT",
+      "HIT"
+    ],
+    "9": [
+      "VALLEY"
+    ],
+    "3050": [
+      "OPENS"
+    ],
+    "6": [
+      "FOREST"
+    ],
+    "2003": [
+      "DUMMY"
+    ],
+    "68": [
+      "TURN"
+    ],
+    "3": [
+      "ENTER",
+      "DOOR",
+      "GATE"
+    ],
+    "65": [
+      "PLUGH"
+    ],
+    "59": [
+      "ROOM"
+    ],
+    "62": [
+      "SE"
+    ],
+    "56": [
+      "CLIMB"
+    ],
+    "47": [
+      "SLIT"
+    ],
+    "1019": [
+      "FOOD",
+      "RATIO"
+    ],
+    "53": [
+      "WALL"
+    ],
+    "44": [
+      "WEST",
+      "W"
+    ],
+    "1016": [
+      "COINS"
+    ],
+    "50": [
+      "ENTRANCE"
+    ],
+    "38": [
+      "HALL"
+    ],
+    "1022": [
+      "KNIFE"
+    ],
+    "1013": [
+      "DIAMOND"
+    ],
+    "35": [
+      "DOME"
+    ],
+    "41": [
+      "OVER"
+    ],
+    "29": [
+      "UPWARD",
+      "UP",
+      "U",
+      "ABOVE"
+    ],
+    "1010": [
+      "NUGGET",
+      "GOLD"
+    ],
+    "32": [
+      "OUTDOOR"
+    ],
+    "26": [
+      "AWKWARD"
+    ],
+    "17": [
+      "CRAWL"
+    ],
+    "3069": [
+      "MIST"
+    ],
+    "23": [
+      "PASSAGE"
+    ],
+    "14": [
+      "STREAM"
+    ],
+    "3066": [
+      "DIG",
+      "EXCIV"
+    ],
+    "20": [
+      "SURFACE"
+    ],
+    "1006": [
+      "STEPS"
+    ],
+    "11": [
+      "OUT",
+      "OUTSIDE",
+      "EXIT",
+      "LEAVE"
+    ],
+    "1003": [
+      "GRATE"
+    ],
+    "2016": [
+      "RUB"
+    ],
+    "2007": [
+      "LIGHT",
+      "ON"
+    ],
+    "2013": [
+      "POUR"
+    ],
+    "7": [
+      "FORWARD",
+      "CONTINUE",
+      "ONWARD"
+    ],
+    "2004": [
+      "UNLOCK",
+      "OPEN",
+      "LIFT"
     ],
     "2010": [
       "CALM",
@@ -1140,8 +1404,13 @@
       "SING",
       "CLEAV"
     ],
-    "15": [
-      "ROCK"
+    "3051": [
+      "HELP",
+      "?",
+      "WHAT"
+    ],
+    "4": [
+      "UPSTREAM"
     ],
     "2001": [
       "TAKE",
@@ -1157,384 +1426,195 @@
       "WHERE",
       "GET"
     ],
-    "12": [
-      "BUILD",
-      "BLD",
-      "HOUSE"
-    ],
-    "8": [
-      "BACK",
-      "RETURN",
-      "RETREAT"
-    ],
-    "1018": [
-      "KNIFE",
-      "KNIVES",
-      "ROCK",
-      "WEAPON",
-      "BOULDER"
-    ],
-    "5": [
-      "DOWNSTREAM"
-    ],
-    "2": [
-      "ROAD"
-    ],
-    "67": [
-      "CAVE"
-    ],
-    "1021": [
-      "AXE"
-    ],
-    "1015": [
-      "JEWELS"
-    ],
-    "3068": [
-      "LOST"
-    ],
-    "64": [
-      "NW"
-    ],
-    "1006": [
-      "STEPS"
-    ],
-    "70": [
-      "BEDQUILT"
-    ],
-    "58": [
-      "FLOOR"
-    ],
-    "1012": [
-      "FISSURE"
-    ],
-    "61": [
-      "SLAB",
-      "SLABROOM"
-    ],
-    "49": [
-      "DEPRESSION"
-    ],
-    "1003": [
-      "GRATE"
-    ],
-    "55": [
-      "Y2"
-    ],
-    "46": [
-      "SOUTH",
-      "S"
-    ],
-    "52": [
-      "HOLE"
-    ],
-    "37": [
-      "RIGHT"
-    ],
-    "43": [
-      "EAST",
-      "E"
-    ],
-    "3050": [
-      "OPENS"
-    ],
-    "34": [
-      "STEPS"
-    ],
-    "40": [
-      "MAGIC"
-    ],
-    "2014": [
-      "EAT"
-    ],
-    "31": [
-      "PIT"
-    ],
-    "19": [
-      "INWARD",
-      "INSIDE",
-      "IN"
-    ],
-    "2008": [
-      "EXTINGUISH",
-      "OFF"
-    ],
-    "25": [
-      "CANYON"
-    ],
-    "2011": [
-      "WALK",
-      "RUN",
-      "TRAVEL",
-      "GO",
-      "PROCEED",
-      "CONTINUE",
-      "EXPLORE",
-      "GOTO",
-      "FOLLOW"
-    ],
-    "16": [
-      "BED"
-    ],
-    "2005": [
-      "NOTHING",
-      "HOLD"
-    ],
-    "22": [
-      "DARK"
-    ],
-    "13": [
-      "GULLY"
-    ],
-    "2002": [
-      "RELEASE",
-      "FREE",
-      "DISCARD",
-      "DROP",
-      "DUMP"
-    ],
-    "10": [
-      "STAIR"
-    ],
-    "9": [
-      "VALLEY"
-    ],
-    "1019": [
-      "FOOD",
-      "RATIO"
-    ],
-    "6": [
-      "FOREST"
-    ],
-    "305": [
-
-    ],
-    "1016": [
-      "COINS"
-    ],
-    "3": [
-      "ENTER",
-      "DOOR",
-      "GATE"
-    ],
-    "68": [
-      "TURN"
-    ],
-    "1022": [
-      "KNIFE"
-    ],
-    "59": [
-      "ROOM"
-    ],
-    "1013": [
-      "DIAMOND"
-    ],
-    "3069": [
-      "MIST"
-    ],
-    "65": [
-      "PLUGH"
-    ],
-    "1007": [
-      "BIRD"
-    ],
-    "56": [
-      "CLIMB"
-    ],
-    "1010": [
-      "NUGGET",
-      "GOLD"
-    ],
-    "3066": [
-      "DIG",
-      "EXCIV"
-    ],
-    "62": [
-      "SE"
-    ],
-    "1004": [
-      "CAGE"
-    ],
-    "47": [
-      "SLIT"
-    ],
-    "1001": [
-      "KEYS",
-      "KEY"
-    ],
-    "53": [
-      "WALL"
-    ],
-    "44": [
-      "WEST",
-      "W"
-    ],
-    "50": [
-      "ENTRANCE"
-    ],
-    "38": [
-      "HALL"
-    ],
-    "41": [
-      "OVER"
-    ],
-    "29": [
-      "UPWARD",
-      "UP",
-      "U",
-      "ABOVE"
-    ],
-    "3051": [
-      "HELP",
-      "?",
-      "WHAT"
-    ],
-    "35": [
-      "DOME"
-    ],
-    "2009": [
-      "STRIKE"
-    ],
-    "26": [
-      "AWKWARD"
-    ],
-    "2015": [
-      "DRINK"
-    ],
-    "32": [
-      "OUTDOOR"
-    ],
-    "23": [
-      "PASSAGE"
-    ],
-    "2012": [
-      "ATTACK",
-      "KILL",
-      "STAB",
-      "FIGHT",
-      "HIT"
-    ],
-    "17": [
-      "CRAWL"
-    ],
-    "2006": [
-      "LOCK",
-      "CLOSE"
-    ],
-    "14": [
-      "STREAM"
-    ],
-    "2003": [
-      "DUMMY"
-    ],
-    "20": [
-      "SURFACE"
+    "69": [
+      "CROSS"
     ]
   },
   "help": {
-    "66": "DIGGING WITHOUT A SHOVEL IS QUITE IMPRACTICAL: EVEN WITH A SHOVEL PROGRESS IS UNLIKELY.",
-    "18": "ARE YOU TRYING TO CATCH THE BIRD?",
-    "43": "WHERE?",
-    "20": "ARE YOU TRYING TO ATTACK OR AVOID THE SNAKE?",
-    "76": "PECULIAR.  NOTHING UNEXPECTED HAPPENS.",
-    "53": "IT GETS YOU!",
-    "30": "THE LITTLE BIRD ATTACKS THE GREEN SNAKE, AND IN AN ASTOUNDING FLURRY DRIVES THE SNAKE AWAY.",
-    "4": "THERE IS A THREATENING LITTLE DWARF IN THE ROOM WITH YOU!",
-    "28": "THERE IS NOTHING HERE WITH A LOCK!",
-    "38": "YOU HAVE NO SOURCE OF LIGHT.",
-    "63": "THE GRATE IS VERY SOLID AND HAS A HARDENED STEEL LOCK. YOU CANNOT ENTER WITHOUT A KEY, AND THERE ARE NO KEYS NEARBY. I WOULD RECOMMEND LOOKING ELSEWHERE FOR THE KEYS.",
-    "15": "SORRY, BUT I AM NOT ALLOWED TO GIVE MORE DETAIL. I WILL REPEAT THE LONG DESCRIPTION OF YOUR LOCATION.",
-    "40": "YOUR LAMP IS NOW OFF.",
-    "73": "THERE IS NO DRINKABLE WATER HERE.",
-    "50": "GOOD TRY, BUT THAT IS AN OLD WORN-OUT MAGIC WORD.",
-    "48": "YOU ATTACK A LITTLE DWARF, BUT HE DODGES OUT OF THE WAY.",
-    "1": "SOMEWHERE NEARBY IS COLOSSAL CAVE, WHERE OTHERS HAVE FOUND FORTUNES IN TREASURE AND GOLD, THOUGH IT IS RUMORED THAT SOME WHO ENTER ARE NEVER SEEN AGAIN. MAGIC IS SAID TO WORK IN THE CAVE.  I WILL BE YOUR EYES AND HANDS. DIRECT ME WITH COMMANDS OF 1 OR 2 WORDS. (ERRORS, SUGGESTIONS, COMPLAINTS TO CROWTHER) (IF STUCK TYPE HELP FOR SOME HINTS)",
-    "25": "YOU CAN'T BE SERIOUS!",
-    "58": "I NEED MORE DETAILED INSTRUCTIONS TO DO THAT.",
-    "35": "THE GRATE IS NOW LOCKED.",
-    "60": "I DON'T KNOW THAT WORD.",
-    "12": "I DON'T KNOW HOW TO APPLY THAT WORD HERE.",
-    "9": "THERE IS NO WAY TO GO THAT DIRECTION.",
-    "70": "YOUR FEET ARE NOW WET.",
-    "68": "I'M AS CONFUSED AS YOU ARE.",
-    "45": "THE LITTLE BIRD IS NOW DEAD. ITS BODY DISAPPEARS.",
-    "22": "MY WORD FOR HITTING SOMETHING WITH THE ROD IS 'STRIKE'.",
-    "80": "WHICH WAY?",
-    "78": "YOU CAN'T POUR THAT.",
-    "55": "YOU CAN'T UNLOCK THE KEYS.",
-    "32": "IT HAS NO LOCK.",
-    "6": "HE GETS YOU!",
-    "65": "WELCOME TO ADVENTURE!!  WOULD YOU LIKE INSTRUCTIONS?",
-    "17": "IF YOU PREFER, SIMPLY TYPE W RATHER THAN WEST.",
-    "42": "NOTHING HAPPENS.",
-    "75": "RUBBING THE ELECTRIC LAMP IS NOT PARTICULARLY REWARDING. ANYWAY, NOTHING EXCITING HAPPENS.",
-    "52": "IT MISSES!",
-    "3": "A LITTLE DWARF JUST WALKED AROUND A CORNER,SAW YOU, THREW A LITTLE AXE AT YOU WHICH MISSED, CURSED, AND RAN AWAY.",
-    "27": "YOU CAN CATCH THE BIRD, BUT YOU CANNOT CARRY IT.",
-    "37": "THE GRATE IS NOW UNLOCKED.",
-    "62": "ARE YOU TRYING TO GET INTO THE CAVE?",
-    "14": "I ALWAYS UNDERSTAND COMPASS DIRECTIONS, OR YOU CAN NAME A NEARBY THING TO HEAD THAT WAY.",
-    "72": "EATEN!",
-    "47": "YOU KILLED A LITTLE DWARF.",
-    "24": "YOU ARE ALREADY CARRYING IT!",
-    "57": "I DON'T KNOW WHERE THE CAVE IS, BUT HEREABOUTS NO STREAM CAN RUN ON THE SURFACE FOR LONG. I WOULD TRY THE STREAM.",
-    "34": "THE GRATE WAS ALREADY LOCKED.",
-    "11": "I DON'T KNOW IN FROM OUT HERE. USE COMPASS POINTS OR NAME SOMETHING IN THE GENERAL DIRECTION YOU WANT TO GO.",
-    "8": "A HOLLOW VOICE SAYS 'PLUGH'",
-    "67": "BLASTING REQUIRES DYNAMITE.",
-    "19": "THE BIRD IS FRIGHTENED RIGHT NOW AND YOU CANNOT CATCH IT NO MATTER WHAT YOU TRY. PERHAPS YOU MIGHT TRY LATER.",
-    "44": "THERE IS NOTHING HERE TO ATTACK.",
-    "21": "YOU CAN'T KILL THE SNAKE, OR DRIVE IT AWAY, OR AVOID IT, OR ANYTHING LIKE THAT. THERE IS A WAY TO GET BY, BUT YOU DON'T HAVE THE NECESSARY RESOURCES RIGHT NOW.",
     "77": "YOUR BOTTLE IS EMPTY AND THE GROUND IS WET.",
+    "29": "YOU AREN'T CARRYING IT!",
     "54": "OK",
     "31": "YOU HAVE NO KEYS!",
-    "5": "ONE SHARP NASTY KNIFE IS THROWN AT YOU!",
-    "29": "YOU AREN'T CARRYING IT!",
+    "1": "SOMEWHERE NEARBY IS COLOSSAL CAVE, WHERE OTHERS HAVE FOUND FORTUNES IN TREASURE AND GOLD, THOUGH IT IS RUMORED THAT SOME WHO ENTER ARE NEVER SEEN AGAIN. MAGIC IS SAID TO WORK IN THE CAVE.  I WILL BE YOUR EYES AND HANDS. DIRECT ME WITH COMMANDS OF 1 OR 2 WORDS. (ERRORS, SUGGESTIONS, COMPLAINTS TO CROWTHER) (IF STUCK TYPE HELP FOR SOME HINTS)",
     "39": "YOUR LAMP IS NOW ON.",
     "64": "THE TREES OF THE FOREST ARE LARGE HARDWOOD OAK AND MAPLE, WITH AN OCCASIONAL GROVE OF PINE OR SPRUCE. THERE IS QUITE A BIT OF UNDERGROWTH, LARGELY BIRCH AND ASH SAPLINGS PLUS NONDESCRITPT BUSHES OF VARIOUS SORTS. THIS TIME OF YEAR VISIBILITY IS QUITE RESTRICTED BY ALL THE LEAVES, BUT TRAVEL IS QUITE EASY IF YOU DETOUR AROUND THE SPRUCE AND BERRY BUSHES.",
     "16": "IT IS NOW PITCH BLACK. IF YOU PROCEED YOU WILL LIKELY FALL INTO A PIT.",
     "41": "STRIKE WHAT?",
+    "9": "THERE IS NO WAY TO GO THAT DIRECTION.",
     "74": "THE BOTTLE OF WATER IS NOW EMPTY.",
+    "26": "THE BIRD WAS UNAFRAID WHEN YOU ENTERED, BUT AS YOU APPROACH IT BECOMES DISTURBED AND YOU CANNOT CATCH IT.",
     "51": "I KNOW OF PLACES, ACTIONS, AND THINGS. MOST OF MY VOCABULARY DESCRIBES PLACES AND IS USED TO MOVE YOU THERE. TO MOVE TRY WORDS LIKE FOREST, BUILDING, DOWNSTREAM, ENTER, EAST, WEST NORTH, SOUTH, UP, OR DOWN.  I KNOW ABOUT A FEW SPECIAL OBJECTS, LIKE A BLACK ROD HIDDEN IN THE CAVE. THESE OBJECTS CAN BE MANIPULATED USING ONE OF THE ACTION WORDS THAT I KNOW. USUALLY  YOU WILL NEED TO GIVE BOTH THE OBJECT AND ACTION WORDS (IN EITHER ORDER), BUT SOMETIMES I CAN INFER THE OBJECT FROM THE VERB ALONE. THE OBJECTS HAVE SIDE EFFECTS - FOR INSTANCE, THE ROD SCARES THE BIRD. USUALLY PEOPLE HAVING TROUBLE MOVING JUST NEED TO TRY A FEW MORE WORDS. USUALLY PEOPLE TRYING TO MANIPULATE AN OBJECT ARE ATTEMPTING SOMETHING BEYOND THEIR (OR MY!) CAPABILITIES AND SHOULD TRY A COMPLETELY DIFFERENT TACK. TO SPEED THE GAME YOU CAN SOMETIMES MOVE LONG DISTANCES WITH A SINGLE WORD. FOR EXAMPLE, 'BUILDING' USUALLY GETS YOU TO THE BUILDING FROM ANYWHERE ABOVE GROUND EXCEPT WHEN LOST IN THE FOREST. ALSO, NOTE THAT CAVE PASSAGES TURN A LOT, AND THAT LEAVING A ROOM TO THE NORTH DOES NOT GUARANTEE ENTERING THE NEXT FROM THE SOUTH. GOOD LUCK!",
     "49": "I HAVE TROUBLE WITH THE WORD 'THROW' BECAUSE YOU CAN THROW A THING OR THROW AT A THING. PLEASE USE DROP OR ATTACK INSTEAD.",
-    "2": "A LITTLE DWARF WITH A BIG KNIFE BLOCKS YOUR WAY.",
-    "26": "THE BIRD WAS UNAFRAID WHEN YOU ENTERED, BUT AS YOU APPROACH IT BECOMES DISTURBED AND YOU CANNOT CATCH IT.",
     "59": "I CAN ONLY TELL YOU WHAT YOU SEE AS YOU MOVE ABOUT AND MANIPULATE THINGS. I CANNOT TELL YOU WHERE REMOTE THINGS ARE.",
     "36": "THE GRATE WAS ALREADY UNLOCKED.",
     "61": "WHAT?",
     "13": "I DON'T UNDERSTAND THAT!",
+    "6": "HE GETS YOU!",
     "71": "THERE IS NOTHING HERE TO EAT.",
     "69": "MIST IS A WHITE VAPOR, USUALLY WATER, SEEN FROM TIME TO TIME IN CAVERNS. IT CAN BE FOUND ANYWHERE BUT IS FREQUENTLY A SIGN OF A DEEP PIT LEADING DOWN TO WATER.",
-    "46": "ATTACKING THE SNAKE BOTH DOESN'T WORK AND IS VERY DANGEROUS.",
     "23": "YOU FELL INTO A PIT AND BROKE EVERY BONE IN YOUR BODY!",
+    "46": "ATTACKING THE SNAKE BOTH DOESN'T WORK AND IS VERY DANGEROUS.",
     "79": "WATCH IT!",
     "56": "YOU HAVE CRAWLED AROUND IN SOME LITTLE HOLES AND WOUND UP BACK IN THE MAIN PASSAGE.",
     "33": "I DON'T KNOW HOW TO LOCK OR UNLOCK SUCH A THING.",
     "10": "I AM UNSURE HOW YOU ARE FACING. USE COMPASS POINTS OR NEARBY OBJECTS.",
-    "7": "NONE OF THEM HIT YOU!"
+    "3": "A LITTLE DWARF JUST WALKED AROUND A CORNER,SAW YOU, THREW A LITTLE AXE AT YOU WHICH MISSED, CURSED, AND RAN AWAY.",
+    "20": "ARE YOU TRYING TO ATTACK OR AVOID THE SNAKE?",
+    "66": "DIGGING WITHOUT A SHOVEL IS QUITE IMPRACTICAL: EVEN WITH A SHOVEL PROGRESS IS UNLIKELY.",
+    "18": "ARE YOU TRYING TO CATCH THE BIRD?",
+    "43": "WHERE?",
+    "76": "PECULIAR.  NOTHING UNEXPECTED HAPPENS.",
+    "28": "THERE IS NOTHING HERE WITH A LOCK!",
+    "53": "IT GETS YOU!",
+    "30": "THE LITTLE BIRD ATTACKS THE GREEN SNAKE, AND IN AN ASTOUNDING FLURRY DRIVES THE SNAKE AWAY.",
+    "38": "YOU HAVE NO SOURCE OF LIGHT.",
+    "63": "THE GRATE IS VERY SOLID AND HAS A HARDENED STEEL LOCK. YOU CANNOT ENTER WITHOUT A KEY, AND THERE ARE NO KEYS NEARBY. I WOULD RECOMMEND LOOKING ELSEWHERE FOR THE KEYS.",
+    "15": "SORRY, BUT I AM NOT ALLOWED TO GIVE MORE DETAIL. I WILL REPEAT THE LONG DESCRIPTION OF YOUR LOCATION.",
+    "40": "YOUR LAMP IS NOW OFF.",
+    "8": "A HOLLOW VOICE SAYS 'PLUGH'",
+    "73": "THERE IS NO DRINKABLE WATER HERE.",
+    "25": "YOU CAN'T BE SERIOUS!",
+    "50": "GOOD TRY, BUT THAT IS AN OLD WORN-OUT MAGIC WORD.",
+    "48": "YOU ATTACK A LITTLE DWARF, BUT HE DODGES OUT OF THE WAY.",
+    "58": "I NEED MORE DETAILED INSTRUCTIONS TO DO THAT.",
+    "35": "THE GRATE IS NOW LOCKED.",
+    "60": "I DON'T KNOW THAT WORD.",
+    "12": "I DON'T KNOW HOW TO APPLY THAT WORD HERE.",
+    "5": "ONE SHARP NASTY KNIFE IS THROWN AT YOU!",
+    "70": "YOUR FEET ARE NOW WET.",
+    "68": "I'M AS CONFUSED AS YOU ARE.",
+    "22": "MY WORD FOR HITTING SOMETHING WITH THE ROD IS 'STRIKE'.",
+    "45": "THE LITTLE BIRD IS NOW DEAD. ITS BODY DISAPPEARS.",
+    "80": "WHICH WAY?",
+    "78": "YOU CAN'T POUR THAT.",
+    "55": "YOU CAN'T UNLOCK THE KEYS.",
+    "32": "IT HAS NO LOCK.",
+    "2": "A LITTLE DWARF WITH A BIG KNIFE BLOCKS YOUR WAY.",
+    "65": "WELCOME TO ADVENTURE!!  WOULD YOU LIKE INSTRUCTIONS?",
+    "17": "IF YOU PREFER, SIMPLY TYPE W RATHER THAN WEST.",
+    "42": "NOTHING HAPPENS.",
+    "75": "RUBBING THE ELECTRIC LAMP IS NOT PARTICULARLY REWARDING. ANYWAY, NOTHING EXCITING HAPPENS.",
+    "27": "YOU CAN CATCH THE BIRD, BUT YOU CANNOT CARRY IT.",
+    "52": "IT MISSES!",
+    "37": "THE GRATE IS NOW UNLOCKED.",
+    "62": "ARE YOU TRYING TO GET INTO THE CAVE?",
+    "14": "I ALWAYS UNDERSTAND COMPASS DIRECTIONS, OR YOU CAN NAME A NEARBY THING TO HEAD THAT WAY.",
+    "7": "NONE OF THEM HIT YOU!",
+    "72": "EATEN!",
+    "24": "YOU ARE ALREADY CARRYING IT!",
+    "47": "YOU KILLED A LITTLE DWARF.",
+    "57": "I DON'T KNOW WHERE THE CAVE IS, BUT HEREABOUTS NO STREAM CAN RUN ON THE SURFACE FOR LONG. I WOULD TRY THE STREAM.",
+    "34": "THE GRATE WAS ALREADY LOCKED.",
+    "11": "I DON'T KNOW IN FROM OUT HERE. USE COMPASS POINTS OR NAME SOMETHING IN THE GENERAL DIRECTION YOU WANT TO GO.",
+    "4": "THERE IS A THREATENING LITTLE DWARF IN THE ROOM WITH YOU!",
+    "67": "BLASTING REQUIRES DYNAMITE.",
+    "21": "YOU CAN'T KILL THE SNAKE, OR DRIVE IT AWAY, OR AVOID IT, OR ANYTHING LIKE THAT. THERE IS A WAY TO GET BY, BUT YOU DON'T HAVE THE NECESSARY RESOURCES RIGHT NOW.",
+    "19": "THE BIRD IS FRIGHTENED RIGHT NOW AND YOU CANNOT CATCH IT NO MATTER WHAT YOU TRY. PERHAPS YOU MIGHT TRY LATER.",
+    "44": "THERE IS NOTHING HERE TO ATTACK."
+  },
+  "title": {
+    "77": "Tall E/W Canyon",
+    "29": "South Side Chamber",
+    "54": "Dead End (54)",
+    "31": "There Is No Way Across the Fissure",
+    "1": "End of Road Again",
+    "39": "Dusty Rock Room",
+    "64": "Complex Junction",
+    "16": "The Crack",
+    "41": "West End of Hall of Mists",
+    "9": "Below the Grate",
+    "74": "Secret Canyon",
+    "51": "Twisty Little Passages (51)",
+    "49": "Twisty Little Passages (49)",
+    "59": "Very Low Wide Passage (59)",
+    "36": "Dirty Passage",
+    "61": "Very Long Featureless Hall",
+    "13": "Bird Chamber",
+    "6": "Forest (6)",
+    "71": "Junction of Three Canyons",
+    "69": "Secret N/S Canyon Above A Large Room",
+    "23": "Locked Steel Grate",
+    "46": "Dead End",
+    "79": "Pair of 1 Foot Diameter Sewer Pipes",
+    "56": "Dead End (56)",
+    "33": "Y2",
+    "10": "Cobble Crawl",
+    "3": "Inside Building",
+    "20": "Broken Neck",
+    "66": "Swiss Cheese Room",
+    "18": "Nugget of Gold Room",
+    "43": "Twisty Little Passages (43)",
+    "76": "The Canyon",
+    "28": "Low N/S Passage at A Hole in the Floor",
+    "53": "Twisty Little Passages (53)",
+    "30": "West Side Chamber of Hall of Mt King",
+    "38": "The Bottom of A Small Pit With A Little Stream,",
+    "63": "Dead End (63)",
+    "15": "Hall of Mists",
+    "40": "Very Low Wide Passage",
+    "8": "Outside Grate",
+    "73": "Dead End Crawl",
+    "25": "Locked Steel Grate (25)",
+    "50": "Twisty Little Passages (50)",
+    "48": "Dead End (48)",
+    "58": "Dead End (58)",
+    "35": "Window On Pit",
+    "60": "East End of Long Hall",
+    "12": "Awkward Sloping East/West Canyon",
+    "5": "Forest",
+    "70": "Secret N/S Canyon Above A Sizable Passage",
+    "68": "Slab Room",
+    "22": "The Dome",
+    "45": "Twisty Little Passages (45)",
+    "78": "Mass of Boulders - Dead End",
+    "55": "Twisty Little Passages (55)",
+    "32": "You Can't Get by the Snake",
+    "2": "Hill in Road",
+    "65": "Long East/West Passage With Holes Everywhere",
+    "17": "East Bank of Fissure",
+    "42": "Twisty Little Passages",
+    "75": "Very Tight N/S Canyon",
+    "27": "West Side of the Fissure in the Hall of Mists",
+    "52": "Twisty Little Passages (52)",
+    "37": "Brink of A Small Clean Climbable Pit",
+    "62": "Crossover of A High N/S Passage and A Low E/W One",
+    "14": "Top of Small Pit",
+    "7": "Slit in Streambed",
+    "72": "Large Low Room",
+    "24": "Two Inch Hole",
+    "47": "Dead End (47)",
+    "57": "Brink of Pit",
+    "34": "Jumble of Rock",
+    "11": "Debris Room",
+    "4": "Valley",
+    "21": "You Didn't Make It",
+    "67": "Twopit Room",
+    "19": "Hall of Mt King",
+    "44": "Twisty Little Passages (44)"
   },
   "reply": {
-    "221": "THERE IS A LITTLE AXE HERE",
-    "20": "THERE IS A BOTTLE OF WATER HERE.",
     "8": "THE GRATE IS LOCKED",
     "7": "A CHEERFUL LITTLE BIRD IS SITTING HERE SINGING.",
     "3": "THE GRATE IS LOCKED",
-    "112": "A CRYSTAL BRIDGE NOW SPANS THE FISSURE.",
+    "221": "THERE IS A LITTLE AXE HERE",
+    "120": "THERE IS AN EMPTY BOTTLE HERE.",
     "19": "THERE IS FOOD HERE.",
+    "11": "A HUGE GREEN FIERCE SNAKE BARS THE WAY!",
     "216": "THERE ARE MANY COINS HERE!",
     "215": "THERE IS PRECIOUS JEWELRY HERE!",
     "214": "THERE ARE BARS OF SILVER HERE!",
     "213": "THERE ARE DIAMONDS HERE!",
-    "11": "A HUGE GREEN FIERCE SNAKE BARS THE WAY!",
+    "112": "A CRYSTAL BRIDGE NOW SPANS THE FISSURE.",
     "210": "THERE IS A LARGE SPARKLING NUGGET OF GOLD HERE!",
+    "20": "THERE IS A BOTTLE OF WATER HERE.",
+    "209": "ROUGH STONE STEPS LEAD UP THE DOME.",
     "108": "THE GRATE IS OPEN.",
     "107": "THERE IS A LITTLE BIRD IN THE CAGE.",
-    "103": "THE GRATE IS OPEN.",
-    "209": "ROUGH STONE STEPS LEAD UP THE DOME.",
     "206": "ROUGH STONE STEPS LEAD DOWN THE PIT.",
     "205": "A THREE FOOT BLACK ROD WITH A RUSTY STAR ON AN END LIES NEARBY",
     "204": "THERE IS A SMALL WICKER CAGE DISCARDED NEARBY.",
+    "103": "THE GRATE IS OPEN.",
     "202": "THERE IS A SHINY BRASS LAMP NEARBY.",
-    "201": "THERE ARE SOME KEYS ON THE GROUND HERE.",
-    "120": "THERE IS AN EMPTY BOTTLE HERE."
+    "201": "THERE ARE SOME KEYS ON THE GROUND HERE."
   }
 }
