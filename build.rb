@@ -305,4 +305,16 @@ File.open('build.dot','w') do |file|
   file.puts dot
 end
 
+File.open('data.json','w') do |file|
+  data = {
+    :room => @room,
+    :short => @short,
+    :dest => @dest,
+    :words => @words,
+    :help => @help,
+    :reply => @reply
+  }
+  file.write JSON.pretty_generate data
+end
+
 puts 'end'
