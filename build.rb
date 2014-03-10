@@ -176,6 +176,26 @@ end
 @actions['312'] = {'stmt' => 's36', 'cond' => 'chance', 'loc' => ['65', '39', '70']}
 @actions['313'] = {'stmt' => 's37', 'cond' => 'chance', 'loc' => ['66', '71', '72']}
 
+def predecessors num
+  from = {}
+  @dest.keys.each do |pred|
+    next if pred == num
+    @dest[pred].each do |succ, keys|
+      if succ == num
+        unless @dest[num].keys.include? pred
+          from[pred] = keys
+        end
+      elsif action = @actions[succ]
+        if action['loc'].include? num
+          from[pred] = keys
+        end
+      end
+    end
+  end
+  from
+end
+
+
 # interpret data as pages
 
 def beTitle num
@@ -205,6 +225,13 @@ def beChoice num, keys
   "#{list.join ', '}<br>#{beDestination num}"
 end
 
+def fromChoice num, keys
+  list = keys.map do |key|
+    @words[key].map(&:downcase).join ' '
+  end
+  "#{beDestination num}<br>#{list.join ', '}"
+end
+
 def dump num
   puts "\n== #{num} =================================="
   puts beDescription num
@@ -223,8 +250,14 @@ def emitStory num
     end
     pagefold 'travel'
     # json @dest[num]
-    @dest[num].each do |num,keys|
-      paragraph beChoice num,keys
+    @dest[num].each do |num2,keys|
+      paragraph beChoice num2,keys
+    end
+    if (preds = predecessors num).keys.length > 0
+      pagefold 'from'
+      preds.each do |from,keys|
+        paragraph fromChoice from, keys
+      end
     end
   end
 end
